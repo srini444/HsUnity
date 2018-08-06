@@ -382,6 +382,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11499828, guid: 59320ed1ba3b61241bc6d7c0bb56b63e, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400012, guid: 59320ed1ba3b61241bc6d7c0bb56b63e, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498604, guid: 59320ed1ba3b61241bc6d7c0bb56b63e, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403536, guid: 59320ed1ba3b61241bc6d7c0bb56b63e, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59320ed1ba3b61241bc6d7c0bb56b63e, type: 2}
   m_IsPrefabAsset: 0
@@ -394,6 +410,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1596954064}
   - component: {fileID: 1596954063}
+  - component: {fileID: 1596954065}
+  - component: {fileID: 1596954066}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -451,3 +469,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1596954065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1596954062}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80c5ca4977cb2a4bbe96485f44dd169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smooth: 2
+--- !u!114 &1596954066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1596954062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e087b25e0abe04dba6e11eb8ede1ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smooth: 2

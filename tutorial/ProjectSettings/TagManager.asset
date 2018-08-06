@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - food
+  - Fire
+  - pawn
   layers:
   - Default
   - TransparentFX
