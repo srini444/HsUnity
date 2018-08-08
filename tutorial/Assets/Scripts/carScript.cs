@@ -10,6 +10,7 @@ public class carScript : MonoBehaviour {
 	public Text scoreText;
 	public int score;
 
+    Vector3 cubeUpperLimit, cubeLowerLimit;
 	void Start () 
 	{
 		score = 0;
@@ -18,7 +19,11 @@ public class carScript : MonoBehaviour {
 		speed = 5;
 		food.transform.position = new Vector3 (Random.Range (-9, 9), 0.5f, Random.Range (-8, 8));
 
+        cubeUpperLimit = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 14.8f));
+        cubeLowerLimit = Camera.main.ScreenToWorldPoint(new Vector3(1, 1, 14.8f));
 
+        Debug.Log("Upper Limit: " + cubeUpperLimit);
+        Debug.Log("Lower Limit: " + cubeLowerLimit);
 	}
 	
 
@@ -41,9 +46,26 @@ public class carScript : MonoBehaviour {
 			transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z - Time.deltaTime* speed);
 		}
 
+       
 
-
-
+        
+        if (transform.position.x < cubeLowerLimit.x)
+        {
+            transform.position = new Vector3(-cubeUpperLimit.x, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x > -cubeUpperLimit.x)
+        {
+            transform.position = new Vector3(cubeLowerLimit.x, transform.position.y, transform.position.z);
+        }
+        if (transform.position.z < cubeLowerLimit.z)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -cubeUpperLimit.z);
+        }
+        else if (transform.position.z > -cubeUpperLimit.z)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, cubeLowerLimit.z);
+        }
+        
 			
 	}
 
