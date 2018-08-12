@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestScriptsDestroy : MonoBehaviour {
+public class TestScriptPublicPrivate : MonoBehaviour {
 
+    [SerializeField]
+    private int a;
+    //public int a;
 	// Use this for initialization
-	void Start ()
-    {
-        Destroy(gameObject, 3f);
+	void Start () {
+        Debug.Log(a);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
 		
 	}
 }
