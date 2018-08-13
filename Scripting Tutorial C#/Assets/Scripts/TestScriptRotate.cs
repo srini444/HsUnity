@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TestScriptRotate : MonoBehaviour {
 
-    //  public float speed = 2f;
+      public float speed = 2f;
 
     // Use this for initialization
 
-    Vector3 temp;
+    //Vector3 temp;
 	void Start () {
 		
 	}
@@ -20,15 +20,18 @@ public class TestScriptRotate : MonoBehaviour {
         //      transform.Rotate(speed,0,0);
 
         // Object position move to  X axis  only
-        // transform.Translate(speed * Time.deltaTime, 0, 0);
+      //  transform.Translate(speed * Time.deltaTime, 0, 0);
+        transform.Translate(0,speed * Time.deltaTime, 0);
+
 
         //transform.Rotate(0,speed, 0);
         // transform.Rotate(0,0, speed);
 
-        temp = transform.localScale;
+        /*temp = transform.localScale;
 
         temp.x += Time.deltaTime;
 
         transform.localScale = temp;
+        */
     }
 }

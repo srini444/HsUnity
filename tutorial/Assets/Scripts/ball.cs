@@ -18,35 +18,45 @@ public class ball : MonoBehaviour {
 	void Update () 
 	{
 		float inputX = Input.GetAxis("Horizontal");
-		float inputZ = Input.GetAxis("Vertical");
+		float inputY = Input.GetAxis("Vertical");
 
 		float moveX = inputX*moveSpeed*Time.deltaTime;
-		float moveZ = inputZ*moveSpeed*Time.deltaTime;
+		float moveY = inputY*moveSpeed*Time.deltaTime;
 
 		//transform.Translate(moveX,0f,moveZ);
-		rbody.AddForce(moveX,0f,moveZ);
+		rbody.AddForce(moveX,moveY,0f);
 	}
+
+    public void AdjustSpeed (float NewmoveSpeed)
+    {
+        moveSpeed = NewmoveSpeed;
+    }
 
 	void OnCollisionEnter(Collision col)
 	{
-		//print (col.collider.name);
-		if(col.collider.name == "wall1")
+		
+		if(col.collider.name == "ForntWall")
 		{
 			
 		}
-		else if(col.collider.name == "wall2")
+		else if(col.collider.name == "Ground")
 		{
 			
 		}
-		else if(col.collider.name == "wall3")
+		else if(col.collider.name == "RightWall")
 		{
 
 		}
-		else if(col.collider.name == "wall4")
+		else if(col.collider.name == "LeftWall")
 		{
 			
 		}
-	}
+
+        else if (col.collider.name == "Top")
+        {
+
+        }
+    }
 }
 
 
