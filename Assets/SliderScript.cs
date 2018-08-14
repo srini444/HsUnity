@@ -16,49 +16,61 @@ public class SliderScript : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x + Time.deltaTime * sliderSpeed,
                                         transform.position.y, transform.position.z);
+
             if (ballState == "stay")
             {
                 ballState = "NorthWest";
             }
         }
-        // Ball Move to Left Side
+
+
         if (ballState == "NorthWest")
+        {
+            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+        }
+
+         if (ballState == "NorthEast")
         {
             ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
         }
 
-      
-        
-        // Press Right Arrow Ball and Slider Move Right side 
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position = new Vector3(transform.position.x - Time.deltaTime * sliderSpeed,
-                                       transform.position.y, transform.position.z);
+                                        transform.position.y, transform.position.z);
+
             if (ballState == "stay")
             {
                 ballState = "NorthEast";
             }
         }
 
-        // Ball Move to Right Side
-        if (ballState == "NorthEast")
-        {
-            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
-        }
-
-
     }
     void OnCollisionEnter(Collision col)
     {
-        if (col.collider.name == "RightWall")
+
+        Debug.Log("Colliding");
+
+        if (col.collider.name == "ForntWall")
         {
-           
 
-        } 
+        }
+        else if (col.collider.name == "Ground")
+        {
 
+        }
+        else if (col.collider.name == "RightWall")
+        {
 
-        
+        }
+        else if (col.collider.name == "LeftWall")
+        {
+
+        }
+
+        else if (col.collider.name == "Top")
+        {
+
+        }
     }
-
-
 }
