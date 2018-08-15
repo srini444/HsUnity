@@ -26,12 +26,12 @@ public class SliderScript : MonoBehaviour
 
         if (ballState == "NorthWest")
         {
-            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+            ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
         }
 
          if (ballState == "NorthEast")
         {
-            ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
