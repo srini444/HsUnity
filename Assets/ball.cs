@@ -26,29 +26,71 @@ public class ball : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 
-        Debug.Log("Colliding");
-        //print (col.collider.name);
-        if (col.collider.name == "wall1")
+        
+        if (col.collider.name == "Leftwall")
 		{
-			rend.material.color = Color.blue;
-			myLight.color = Color.blue;
+			
+            if(SliderScript.ballState == "SouthWest")
+            {
+                SliderScript.ballState = "SouthEast";
 
-                   }
-		else if(col.collider.name == "wall2")
+            }
+
+            if(SliderScript.ballState == "NorthWest")
+            {
+                SliderScript.ballState = "NorthEast";
+            }
+        }
+		else if(col.collider.name == "RightWall")
 		{
-			rend.material.color = Color.red;
-			myLight.color = Color.red;
-		}
-		else if(col.collider.name == "wall3")
+            if (SliderScript.ballState == "SouthEast")
+            {
+                SliderScript.ballState = "SouthWest";
+
+            }
+
+            if (SliderScript.ballState == "NorthEast")
+            {
+                SliderScript.ballState = "NorthWest";
+            }
+        }
+		else if(col.collider.name == "ceiling" || col.transform.tag == "pawn")		
+            {
+            if (SliderScript.ballState == "NorthWest")
+            {
+                SliderScript.ballState = "SouthWest";
+
+            }
+
+            if (SliderScript.ballState == "NorthEast")
+            {
+                SliderScript.ballState = "SouthEast";
+            }
+
+            if(col.transform.tag == "pawn")
+            {
+                Destroy(col.gameObject);
+            }
+        }
+		else if(col.collider.name == "floor")
 		{
-			rend.material.color = Color.green;
-			myLight.color = Color.green;
+            Destroy(gameObject);
+
 		}
-		else if(col.collider.name == "wall4")
-		{
-			rend.material.color = Color.yellow;
-			myLight.color = Color.yellow;
-		}
+
+        else if(col.collider.name == "Slider")
+        {
+            if (SliderScript.ballState == "SouthWest")
+            {
+                SliderScript.ballState = "NorthWest";
+
+            }
+
+            if (SliderScript.ballState == "SouthEast")
+            {
+                SliderScript.ballState = "NorthEast";
+            }
+        }
 	}
 }
 

@@ -9,7 +9,21 @@ public class SliderScript : MonoBehaviour
     float sliderSpeed = 10;
     public GameObject ball;
     float ballSpeed = 5;
-	void Update ()
+    public GameObject pawn;
+    void Start()
+    {
+        for (int t = 0; t < 3; t++)
+        {
+            for (int r = 0; r < 12; r++)
+            {
+                GameObject temp = (GameObject)Instantiate(pawn, new Vector3(-7.1f + 1.5f * r, 18.2f -1.5f*t, -0.7f),
+
+                    Quaternion.identity);
+            }
+        }
+    }
+
+    void Update ()
     {
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -24,15 +38,7 @@ public class SliderScript : MonoBehaviour
         }
 
 
-        if (ballState == "NorthWest")
-        {
-            ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
-        }
-
-         if (ballState == "NorthEast")
-        {
-            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
-        }
+       
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -43,6 +49,26 @@ public class SliderScript : MonoBehaviour
             {
                 ballState = "NorthEast";
             }
+        }
+
+        if (ballState == "NorthWest")
+        {
+            ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+        }
+
+        if (ballState == "NorthEast")
+        {
+            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+        }
+
+        if (ballState == "SouthWest")
+        {
+            ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, -Time.deltaTime * ballSpeed, 0));
+        }
+
+        if (ballState == "SouthEast")
+        {
+            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, -Time.deltaTime * ballSpeed, 0));
         }
 
     }
