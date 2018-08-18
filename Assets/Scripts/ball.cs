@@ -3,30 +3,9 @@ using System.Collections;
 
 public class ball : MonoBehaviour {
 
-	public float moveSpeed = 10f;
-
-	private Rigidbody rbody;
-	private Renderer rend;
-	private Light myLight;
-
-	// Use this for initialization
-	void Start () 
-	{
-		rbody = GetComponent<Rigidbody>();
-		rend = GetComponent<Renderer>();
-		myLight = GetComponent<Light>();
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
-
 	void OnCollisionEnter(Collision col)
 	{
-
-        
+      
         if (col.collider.name == "Leftwall")
 		{
 			

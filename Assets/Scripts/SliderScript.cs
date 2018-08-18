@@ -6,10 +6,11 @@ public class SliderScript : MonoBehaviour
 {
 
     public static string ballState = "stay";
-    float sliderSpeed = 10;
+    float sliderSpeed = 20;
     public GameObject ball;
-    float ballSpeed = 5;
+    float ballSpeed = 10;
     public GameObject pawn;
+
     void Start()
     {
         for (int t = 0; t < 3; t++)
@@ -26,7 +27,7 @@ public class SliderScript : MonoBehaviour
     void Update ()
     {
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.RightArrow)) 
         {
             transform.position = new Vector3(transform.position.x + Time.deltaTime * sliderSpeed,
                                         transform.position.y, transform.position.z);
@@ -34,13 +35,14 @@ public class SliderScript : MonoBehaviour
             if (ballState == "stay")
             {
                 ballState = "NorthWest";
+                //RightSide
             }
         }
 
 
        
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.LeftArrow)) 
         {
             transform.position = new Vector3(transform.position.x - Time.deltaTime * sliderSpeed,
                                         transform.position.y, transform.position.z);
@@ -48,55 +50,33 @@ public class SliderScript : MonoBehaviour
             if (ballState == "stay")
             {
                 ballState = "NorthEast";
+                //LeftSide
             }
         }
 
         if (ballState == "NorthWest")
         {
             ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+                                                 //(-x, y, 0)                           
         }
 
         if (ballState == "NorthEast")
         {
             ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+                                                 //(x, y, 0)
         }
 
         if (ballState == "SouthWest")
         {
             ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, -Time.deltaTime * ballSpeed, 0));
+                                                //(-x, -y, 0)             
         }
 
         if (ballState == "SouthEast")
         {
             ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, -Time.deltaTime * ballSpeed, 0));
+                                                //(x, -y, 0)
         }
 
-    }
-    void OnCollisionEnter(Collision col)
-    {
-
-        Debug.Log("Colliding");
-
-        if (col.collider.name == "ForntWall")
-        {
-
-        }
-        else if (col.collider.name == "Ground")
-        {
-
-        }
-        else if (col.collider.name == "RightWall")
-        {
-
-        }
-        else if (col.collider.name == "LeftWall")
-        {
-
-        }
-
-        else if (col.collider.name == "Top")
-        {
-
-        }
     }
 }
