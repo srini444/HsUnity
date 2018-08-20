@@ -26,12 +26,12 @@ public class SliderScript : MonoBehaviour
 
         if (ballState == "NorthWest")
         {
-            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+            ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
         }
 
          if (ballState == "NorthEast")
         {
-            ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
@@ -49,26 +49,26 @@ public class SliderScript : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
 
-        Debug.Log("Colliding");
+        
 
-        if (col.collider.name == "ForntWall")
+        if (col.collider.name == "ceiling")
+        {
+            Debug.Log("Collider With ceiling");
+        }
+        else if (col.collider.name == "wall1")
         {
 
         }
-        else if (col.collider.name == "Ground")
+        else if (col.collider.name == "wall3")
         {
-
+            Debug.Log("Collider With Left"); 
         }
-        else if (col.collider.name == "RightWall")
-        {
-
-        }
-        else if (col.collider.name == "LeftWall")
+        else if (col.collider.name == "floor")
         {
 
         }
 
-        else if (col.collider.name == "Top")
+        else if (col.collider.name == "wall4")
         {
 
         }
