@@ -16,11 +16,12 @@ public class BallMovement : MonoBehaviour {
         if(col.collider.name == "LeftWall")
         {
 
-           if(sliderMovement.ballState == "RightSide")
+    /*       if(sliderMovement.ballState == "RightSide")
             {
                 sliderMovement.ballState = "LeftSide";
             }
 
-        }
+    */   
+    }
     }
 }

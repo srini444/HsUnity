@@ -40,7 +40,6 @@ public class SliderScript : MonoBehaviour
         }
 
 
-<<<<<<< HEAD:Assets/SliderScript.cs
         if (ballState == "NorthWest")
         {
             ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
@@ -50,9 +49,7 @@ public class SliderScript : MonoBehaviour
         {
             ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
         }
-=======
-       
->>>>>>> b84dbbf1c1582d99181f92b4d9416d98da22f72b:Assets/Scripts/SliderScript.cs
+
 
         if (Input.GetKey(KeyCode.LeftArrow)) 
         {
@@ -66,12 +63,11 @@ public class SliderScript : MonoBehaviour
             }
         }
 
-<<<<<<< HEAD:Assets/SliderScript.cs
     }
     void OnCollisionEnter(Collision col)
     {
 
-        
+
 
         if (col.collider.name == "ceiling")
         {
@@ -83,39 +79,39 @@ public class SliderScript : MonoBehaviour
         }
         else if (col.collider.name == "wall3")
         {
-            Debug.Log("Collider With Left"); 
+            Debug.Log("Collider With Left");
         }
         else if (col.collider.name == "floor")
         {
-=======
-        if (ballState == "NorthWest")
-        {
-            ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
-                                                 //(-x, y, 0)                           
-        }
 
-        if (ballState == "NorthEast")
-        {
-            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
-                                                 //(x, y, 0)
-        }
->>>>>>> b84dbbf1c1582d99181f92b4d9416d98da22f72b:Assets/Scripts/SliderScript.cs
+            if (ballState == "NorthWest")
+            {
+                ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+                //(-x, y, 0)                           
+            }
 
-        if (ballState == "SouthWest")
-        {
-            ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, -Time.deltaTime * ballSpeed, 0));
-                                                //(-x, -y, 0)             
-        }
+            if (ballState == "NorthEast")
+            {
+                ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, Time.deltaTime * ballSpeed, 0));
+                //(x, y, 0)
+            }
 
-<<<<<<< HEAD:Assets/SliderScript.cs
-        else if (col.collider.name == "wall4")
-=======
-        if (ballState == "SouthEast")
->>>>>>> b84dbbf1c1582d99181f92b4d9416d98da22f72b:Assets/Scripts/SliderScript.cs
-        {
-            ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, -Time.deltaTime * ballSpeed, 0));
-                                                //(x, -y, 0)
-        }
 
+            if (ballState == "SouthWest")
+            {
+                ball.transform.Translate(new Vector3(-Time.deltaTime * ballSpeed, -Time.deltaTime * ballSpeed, 0));
+                //(-x, -y, 0)             
+            }
+
+            else if (col.collider.name == "wall4")
+
+                if (ballState == "SouthEast")
+
+                {
+                    ball.transform.Translate(new Vector3(Time.deltaTime * ballSpeed, -Time.deltaTime * ballSpeed, 0));
+                    //(x, -y, 0)
+                }
+
+        }
     }
 }

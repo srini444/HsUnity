@@ -441,7 +441,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 47f08caeecb7d9b4faa3b3db4479d8a0, type: 2}
+  - {fileID: 2100000, guid: df435bd56fd81674aaa8409bc33f846d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -605,7 +605,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: d57d6300d36e6a541aa04f0d5e1fd11f, type: 2}
+  - {fileID: 2100000, guid: 129502b66a997034080259407f059f8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -699,7 +699,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1999385962}
   - component: {fileID: 1999385963}
-  - component: {fileID: 1999385964}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -737,21 +736,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1999385964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1999385961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f408c6d2d74e76a40afad5bdeefc76d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  motorGucu: 40
-  onSol: {fileID: 710162654}
-  onSag: {fileID: 870142849}
-  arkaSol: {fileID: 552540660}
-  arkaSag: {fileID: 1833720527}
-  donmeGucu: 25
-  frenGucu: 60
