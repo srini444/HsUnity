@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarControl : MonoBehaviour {
+public class CarControlModel : MonoBehaviour {
 
     public float motorGucu;
     public WheelCollider onSol;
