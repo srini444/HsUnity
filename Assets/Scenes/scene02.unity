@@ -220,8 +220,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 180282611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 6.4, z: 0}
+  m_LocalScale: {x: 3.1226, y: 3.1226, z: 3.1226}
   m_Children:
   - {fileID: 1539576120}
   - {fileID: 542844937}
@@ -387,7 +387,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 488362480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 11.3, z: -33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -405,6 +405,7 @@ GameObject:
   - component: {fileID: 520752111}
   - component: {fileID: 520752110}
   - component: {fileID: 520752114}
+  - component: {fileID: 520752115}
   m_Layer: 0
   m_Name: ball
   m_TagString: Untagged
@@ -473,7 +474,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 520752109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -1.55, z: -3.51}
+  m_LocalPosition: {x: -0.02, y: 3.1090004, z: -3.644}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -494,6 +495,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &520752115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 520752109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0b4e826ae176346ae56bfc52aed5fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &542844933
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +737,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 916441253}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.004000187, y: -1.8590003, z: -3.566}
+  m_LocalPosition: {x: 0.004000187, y: 2.8, z: -3.7}
   m_LocalScale: {x: 2.23, y: 0.05, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -739,12 +751,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 916441253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d2e2763d38f174d867a9a528fade80, type: 3}
+  m_Script: {fileID: 11500000, guid: b2b767a062774ea4d8341d0aa247e611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderSpeed: 100
   ball: {fileID: 520752109}
-  ballSpeed: 10
+  pawn: {fileID: 1613978040629806, guid: afa90a166c7094b4399938ca3bdecb9e, type: 2}
 --- !u!1 &1038543098
 GameObject:
   m_ObjectHideFlags: 0
