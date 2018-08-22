@@ -14,11 +14,7 @@ public class CarControlModel : MonoBehaviour {
 
 
 
-    void Start ()
-    {
-		
-	}
-	
+   
 	
 	void Update ()
     {
@@ -42,6 +38,6 @@ public class CarControlModel : MonoBehaviour {
             arkaSag.brakeTorque = 0;
 
         }
-
+        
     }
 }
