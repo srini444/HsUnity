@@ -21,13 +21,11 @@ public class TraficLights : MonoBehaviour {
     public Material greenLightON;
     public Material greenLightOFF;
 
-   
+    public Light sportLightRed;
+    public Light sportLightGreen;
+    public Light sportLightYellow;
 
-    void Start ()
-    {
-		
-	}
-	
+   
 	
 	void Update ()
     {
@@ -36,11 +34,13 @@ public class TraficLights : MonoBehaviour {
         {
             //Press R Button 
             redLight.material = redLightON;
+            sportLightRed.intensity = 20f;
         }
         else
         {
             //Press R Button 
             redLight.material = redLightOFF;
+            sportLightRed.intensity = 0f;
         }
 
 
@@ -50,11 +50,13 @@ public class TraficLights : MonoBehaviour {
         {
             //Press Y Button 
             yellowLight.material = yellowLightON;
+            sportLightYellow.intensity = 20f;
         }
         else
         {
             //Press Y Button 
             yellowLight.material = yellowLightOFF;
+            sportLightYellow.intensity = 0f;
         }
 
  // Green Light
@@ -62,11 +64,13 @@ public class TraficLights : MonoBehaviour {
         {
             //Press Y Button 
             greenLight.material = greenLightON;
+            sportLightGreen.intensity = 20f;
         }
         else
         {
             //Press Y Button 
             greenLight.material = greenLightOFF;
+            sportLightGreen.intensity = 0f;
         }
 
 
