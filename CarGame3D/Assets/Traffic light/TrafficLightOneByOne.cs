@@ -31,7 +31,7 @@ public class TrafficLightOneByOne : MonoBehaviour {
         timer += Time.deltaTime;
         if (timer > 5)
         {
-            redLightOFF;
+           // redLightOFF;
         }
 
 	}
