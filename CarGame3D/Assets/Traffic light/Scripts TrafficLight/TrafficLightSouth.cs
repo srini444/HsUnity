@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[SerializeField]
 public class TrafficLightSouth : MonoBehaviour {
 
 
@@ -44,24 +45,24 @@ public class TrafficLightSouth : MonoBehaviour {
 	
 	void Update ()
     {
-
+       
         timer += Time.deltaTime;
         if (timer > 5 && timer<10 && level1 == false)
         {
-            //yellowLightSouth.material.color = brightYellowSouth;
-            redLightSouth.material.color = brightRedSouth;
-            Debug.Log("Red Light on South");
+            greenLightSouth.material.color = brightGreenSouth;
+            Debug.Log("Green Light on South");
             
-            redLightSouth.material.color = dullRedSouth;
+            greenLightSouth.material.color = dullGreenSouth;
             level1 = true;
         }
 
         
         if (timer > 10 && timer<15 && level2 == false)
         {
-            yellowLightSouth.material.color = dullYellowSouth;
-            greenLightSouth.material.color = brightGreenSouth;
-            Debug.Log("Green Light on South");
+
+            redLightSouth.material.color = dullRedSouth;
+            yellowLightSouth.material.color = brightYellowSouth;
+            Debug.Log("Yellow Light on South");
             level2 = true;
            
 
@@ -70,7 +71,7 @@ public class TrafficLightSouth : MonoBehaviour {
         
         if (timer >15)
         {
-            greenLightSouth.material.color = dullGreenSouth;
+            yellowLightSouth.material.color = dullYellowSouth;
             redLightSouth.material.color = brightRedSouth;
             Debug.Log("Red Light on South");
 
@@ -80,6 +81,8 @@ public class TrafficLightSouth : MonoBehaviour {
 
         }
 
+    
+       
 
     }
 }
