@@ -5,13 +5,14 @@ using UnityEngine;
 public class TrafficRulls : MonoBehaviour 
 {
 
-	public GameObject Red;
-	public GameObject Yellow;
-	public GameObject Green;
+	public GameObject North;
+	public GameObject South;
+	public GameObject East;
+	public GameObject West;
 
-	public Renderer redLight;
-	public Renderer yellowLight;
-	public Renderer greenLight;
+	public Material Red;
+	public Material Yellow;
+	public Material Green;
 
 
 	public Color brightRed;
@@ -23,25 +24,24 @@ public class TrafficRulls : MonoBehaviour
 	public Color brightGreen;
 	public Color dullGreen;
 
-	bool level1, level2, level3;
+	//bool level1, level2, level3;
 
+
+		
 	float timer = 0;
 	void Start()
 	{
-		/*Red = transform.Find ("Red").gameObject;
-		Yellow = transform.Find ("Yellow").gameObject;
-		Green = transform.Find ("Green").gameObject;
-
-		Red = Red.GetComponent<Renderer> ();
-		Yellow = Yellow.GetComponent<Renderer>();
-		Green = Green.GetComponent<Renderer>();
-		*/
+		
 	}
 
 	void Update()
 	{
 
+		if (timer <= 3) 
+		{
 
+		
+		}
 
 
 
