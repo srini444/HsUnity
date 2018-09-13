@@ -5,7 +5,7 @@ using UnityEngine;
 public class TL : MonoBehaviour {
 
 	public GameObject TL1;
-   //public GameObject TL2;
+   
 
 
 	public GameObject Red;
@@ -27,7 +27,7 @@ public class TL : MonoBehaviour {
 	public Color brightGreen;
 	public Color dullGreen;
 
-	float timer = 0;
+	float timer = 5;
 	bool level1, level2, level3;
 
 	void Start () 
@@ -41,40 +41,77 @@ public class TL : MonoBehaviour {
 
 
 		TL1 = transform.Find ("TL1").gameObject;
-		//TL2 = transform.Find ("TL2").gameObject;
+
 
 
 		timer += Time.deltaTime;
 
 		if (timer > 5 && timer < 10 && level1 == false) 
 		{
-			transform.Find ("TL1/Red").GetComponent<Renderer> ().material.color = dullRed;
+			transform.Find ("TL1/Red").GetComponent<Renderer> ().material.color = brightRed;
 			transform.Find ("TL1/Yellow").GetComponent<Renderer> ().material.color = dullYellow;
-			transform.Find ("TL1/Green").GetComponent<Renderer> ().material.color = brightGreen;
+			transform.Find ("TL1/Green").GetComponent<Renderer> ().material.color = dullGreen;
 
-			//transform.Find ("TL2/Red").GetComponent<Renderer> ().material.color = brightYellow;
+
+			transform.Find ("TL1/Red1").GetComponent<Renderer> ().material.color = dullRed;
+			transform.Find ("TL1/Yellow1").GetComponent<Renderer> ().material.color = brightYellow;
+			transform.Find ("TL1/Green1").GetComponent<Renderer> ().material.color = dullGreen;
+
+			transform.Find ("TL1/Red2").GetComponent<Renderer> ().material.color = dullRed;
+			transform.Find ("TL1/Yellow2").GetComponent<Renderer> ().material.color = dullYellow;
+			transform.Find ("TL1/Green2").GetComponent<Renderer> ().material.color = brightGreen;
+
+
+			transform.Find ("TL1/Red3").GetComponent<Renderer> ().material.color = dullRed;
+			transform.Find ("TL1/Yellow3").GetComponent<Renderer> ().material.color = dullYellow;
+			transform.Find ("TL1/Green3").GetComponent<Renderer> ().material.color = brightGreen;
 
 
 			level1 = true;
 		} 
 
-		if (timer > 10 && timer < 15 && level2 == false) 
+		else if (timer > 10 && timer < 15 && level2 == false) 
 		{
 			transform.Find ("TL1/Red").GetComponent<Renderer> ().material.color = brightRed;
 			transform.Find ("TL1/Yellow").GetComponent<Renderer> ().material.color = dullYellow;
 			transform.Find ("TL1/Green").GetComponent<Renderer> ().material.color = dullGreen;
 
-		//	level2 == true;
+			transform.Find ("TL1/Red1").GetComponent<Renderer> ().material.color = dullRed;
+			transform.Find ("TL1/Yellow1").GetComponent<Renderer> ().material.color = brightYellow;
+			transform.Find ("TL1/Green1").GetComponent<Renderer> ().material.color = dullGreen;
 
+			transform.Find ("TL1/Red2").GetComponent<Renderer> ().material.color = dullRed;
+			transform.Find ("TL1/Yellow2").GetComponent<Renderer> ().material.color = brightYellow;
+			transform.Find ("TL1/Green2").GetComponent<Renderer> ().material.color = dullGreen;
+
+
+
+			transform.Find ("TL1/Red3").GetComponent<Renderer> ().material.color = brightRed;
+			transform.Find ("TL1/Yellow3").GetComponent<Renderer> ().material.color = brightYellow;
+			transform.Find ("TL1/Green3").GetComponent<Renderer> ().material.color = brightGreen;
+		//	level2 == true;
+		
 
 		}
 
-		if (timer > 15 ) 
+		else if (timer > 15 ) 
 		{
 			transform.Find ("TL1/Red").GetComponent<Renderer> ().material.color = dullRed;
 			transform.Find ("TL1/Yellow").GetComponent<Renderer> ().material.color = brightYellow;
 			transform.Find ("TL1/Green").GetComponent<Renderer> ().material.color = dullGreen;
 
+			transform.Find ("TL1/Red1").GetComponent<Renderer> ().material.color = brightRed;
+			transform.Find ("TL1/Yellow1").GetComponent<Renderer> ().material.color = dullYellow;
+			transform.Find ("TL1/Green1").GetComponent<Renderer> ().material.color = brightGreen;
+
+			transform.Find ("TL1/Red2").GetComponent<Renderer> ().material.color = brightRed;
+			transform.Find ("TL1/Yellow2").GetComponent<Renderer> ().material.color = dullYellow;
+			transform.Find ("TL1/Green2").GetComponent<Renderer> ().material.color = brightGreen;
+
+
+			transform.Find ("TL1/Red3").GetComponent<Renderer> ().material.color = dullRed;
+			transform.Find ("TL1/Yellow3").GetComponent<Renderer> ().material.color = brightYellow;
+			transform.Find ("TL1/Green3").GetComponent<Renderer> ().material.color = dullGreen;
 
 			level1 = false;
 			level2 = false;
