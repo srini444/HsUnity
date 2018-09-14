@@ -117,4 +117,4 @@ public class CloudSpawner : MonoBehaviour {
 		player.transform.position = temp;
 
 	}
-}//CloudSpawner
+}//CloudSpawner 
