@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 6896827}
   - component: {fileID: 6896826}
   - component: {fileID: 6896825}
+  - component: {fileID: 6896829}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -195,6 +196,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6896829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6896824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b162343903bd1459aa23cb555af6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveCamera: 0
 --- !u!1001 &65350555
 Prefab:
   m_ObjectHideFlags: 0
@@ -495,6 +508,7 @@ GameObject:
   - component: {fileID: 751608844}
   - component: {fileID: 751608845}
   - component: {fileID: 751608846}
+  - component: {fileID: 751608847}
   m_Layer: 0
   m_Name: Cloud Collector
   m_TagString: Untagged
@@ -551,6 +565,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431761b52f815da4b857bf9b3d07fed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &751608847
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 751608843}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &765991650
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +734,7 @@ GameObject:
   - component: {fileID: 1204805581}
   - component: {fileID: 1204805582}
   - component: {fileID: 1204805583}
+  - component: {fileID: 1204805584}
   m_Layer: 0
   m_Name: Cloud Spawner
   m_TagString: Untagged
@@ -766,6 +801,26 @@ MonoBehaviour:
   - {fileID: 1256980638}
   - {fileID: 1167897958}
   collecttables: []
+--- !u!50 &1204805584
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1204805580}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1210479949
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,19 +1027,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114444081124798766, guid: 6c714409fe11c284e95476bb8837bf6f,
-        type: 2}
-      propertyPath: myBody
-      value: 
-      objectReference: {fileID: 1513078974}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c714409fe11c284e95476bb8837bf6f, type: 2}
   m_IsPrefabParent: 0
---- !u!50 &1513078974 stripped
-Rigidbody2D:
-  m_PrefabParentObject: {fileID: 50689982227299752, guid: 6c714409fe11c284e95476bb8837bf6f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1513078970}
 --- !u!1 &1589548568
 GameObject:
   m_ObjectHideFlags: 0
