@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GunRotate : MonoBehaviour {
-
+	Vector3 gunpos;
 	public float GunRouondSpeed;
 	public GameObject Gun;
 
@@ -16,7 +16,12 @@ public class GunRotate : MonoBehaviour {
 
 	void Update () 
 	{
-		transform.RotateAround (Gun.transform.position, Vector3.up, GunRouondSpeed * Time.deltaTime);
+
+		gunpos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+
+		transform.LookAt (gunpos);
+
+		//transform.RotateAround (Gun.transform.position, Vector3.up, GunRouondSpeed * Time.deltaTime);
 		//GunAround ();
 	}
 

@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour {
         engineSound.pitch = 0.6f;
         // max rotation speed
         Rigid.maxAngularVelocity = 0.6f;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.Locked;
 
     }
 

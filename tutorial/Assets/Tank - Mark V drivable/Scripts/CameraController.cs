@@ -33,8 +33,8 @@ public class CameraController : MonoBehaviour {
         canon.transform.forward = cam.transform.forward;
         canon.transform.rotation *= startRotation;
 
-        currentY += Input.GetAxis("Mouse X");
-        currentX += Input.GetAxis("Mouse Y");
+//        currentY += Input.GetAxis("Mouse X");
+//        currentX += Input.GetAxis("Mouse Y");
 
         // max and min rotation
         currentY = Mathf.Clamp(currentY, minY, maxY);
