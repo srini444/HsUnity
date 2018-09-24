@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 125910480}
   - component: {fileID: 125910479}
   - component: {fileID: 125910478}
+  - component: {fileID: 125910482}
   m_Layer: 0
   m_Name: West
   m_TagString: Untagged
@@ -367,6 +368,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &125910482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125910477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549e6d6d7967a5749a61bd90dc92e007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TL1: {fileID: 0}
+  Red: {fileID: 0}
+  Yellow: {fileID: 0}
+  Green: {fileID: 0}
+  redLight: {fileID: 0}
+  yellowLight: {fileID: 0}
+  greenLight: {fileID: 0}
+  brightRed: {r: 1, g: 0, b: 0, a: 0}
+  dullRed: {r: 0, g: 0, b: 0, a: 0}
+  brightYellow: {r: 0, g: 0, b: 0, a: 0}
+  dullYellow: {r: 0, g: 0, b: 0, a: 0}
+  brightGreen: {r: 0, g: 0, b: 0, a: 0}
+  dullGreen: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &282654651
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,6 +999,7 @@ GameObject:
   - component: {fileID: 1199353987}
   - component: {fileID: 1199353986}
   - component: {fileID: 1199353985}
+  - component: {fileID: 1199353989}
   m_Layer: 0
   m_Name: South
   m_TagString: Untagged
@@ -1049,6 +1075,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1199353989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1199353984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549e6d6d7967a5749a61bd90dc92e007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TL1: {fileID: 0}
+  Red: {fileID: 0}
+  Yellow: {fileID: 0}
+  Green: {fileID: 0}
+  redLight: {fileID: 0}
+  yellowLight: {fileID: 0}
+  greenLight: {fileID: 0}
+  brightRed: {r: 1, g: 0, b: 0, a: 0}
+  dullRed: {r: 0.6544118, g: 0.28389922, b: 0.28389922, a: 0}
+  brightYellow: {r: 0.94482756, g: 1, b: 0, a: 0}
+  dullYellow: {r: 0.7950491, g: 0.8014706, b: 0.33591044, a: 0}
+  brightGreen: {r: 0.014705896, g: 1, b: 0.103042595, a: 0}
+  dullGreen: {r: 0.4240395, g: 0.66176474, b: 0.2870891, a: 0}
 --- !u!1 &1231198397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,6 +1701,7 @@ GameObject:
   - component: {fileID: 1958888356}
   - component: {fileID: 1958888355}
   - component: {fileID: 1958888354}
+  - component: {fileID: 1958888358}
   m_Layer: 0
   m_Name: East
   m_TagString: Untagged
@@ -1726,6 +1777,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1958888358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958888353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549e6d6d7967a5749a61bd90dc92e007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TL1: {fileID: 0}
+  Red: {fileID: 0}
+  Yellow: {fileID: 0}
+  Green: {fileID: 0}
+  redLight: {fileID: 0}
+  yellowLight: {fileID: 0}
+  greenLight: {fileID: 0}
+  brightRed: {r: 1, g: 0, b: 0, a: 0}
+  dullRed: {r: 0.63235295, g: 0.19063582, b: 0.19063582, a: 0}
+  brightYellow: {r: 0.94482756, g: 1, b: 0, a: 0}
+  dullYellow: {r: 0.66176474, g: 0.6118304, b: 0.20923445, a: 0}
+  brightGreen: {r: 0.19999993, g: 1, b: 0, a: 0}
+  dullGreen: {r: 0.4022491, g: 0.6838235, b: 0.33185554, a: 0}
 --- !u!1 &1991738217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,21 +2072,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2063334368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bdd071104ef2bc46ad9acebb0cf5090, type: 3}
+  m_Script: {fileID: 11500000, guid: 549e6d6d7967a5749a61bd90dc92e007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TL1: {fileID: 0}
   Red: {fileID: 0}
   Yellow: {fileID: 0}
   Green: {fileID: 0}
   redLight: {fileID: 0}
   yellowLight: {fileID: 0}
   greenLight: {fileID: 0}
-  brightRed: {r: 1, g: 0, b: 0, a: 1}
-  dullRed: {r: 0.6691177, g: 0.29519898, b: 0.29519898, a: 1}
-  brightYellow: {r: 0.90344834, g: 1, b: 0, a: 1}
-  dullYellow: {r: 0.67664963, g: 0.7794118, b: 0.20631489, a: 1}
-  brightGreen: {r: 0, g: 1, b: 0.17241383, a: 1}
-  dullGreen: {r: 0.2030195, g: 0.5955882, b: 0.17079367, a: 1}
+  brightRed: {r: 0, g: 0, b: 0, a: 0}
+  dullRed: {r: 0, g: 0, b: 0, a: 0}
+  brightYellow: {r: 0, g: 0, b: 0, a: 0}
+  dullYellow: {r: 0, g: 0, b: 0, a: 0}
+  brightGreen: {r: 0, g: 0, b: 0, a: 0}
+  dullGreen: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2100336807
 GameObject:
   m_ObjectHideFlags: 0

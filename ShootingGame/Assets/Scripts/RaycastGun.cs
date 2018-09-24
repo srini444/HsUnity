@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RaycastGun : MonoBehaviour {
-	
+
+	Vector3 worldMousePos;
 	public GameObject enemy;
-	void Start () 
+	void Start ()
 	{
 
 	}
-	
 	void Update () 
 	{
 		
@@ -17,6 +17,7 @@ public class RaycastGun : MonoBehaviour {
         RaycastHit vHit;
         
 
+		worldMousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
 
         if (Physics.Raycast(ray, out vHit,100))
@@ -25,28 +26,9 @@ public class RaycastGun : MonoBehaviour {
 
 			if (vHit.transform.tag == "enemy")
             {
-                if (Input.GetMouseButtonDown(0))
-                {
-					if (vHit.transform.GetComponent<Renderer>().material.color != Color.red)
-                    { 
-						
-                    vHit.transform.GetComponent<Renderer>().material.color = Color.red;
-
-                    }
-                    else
-                    {
-						
-                    vHit.transform.GetComponent<Renderer>().material.color = Color.white;
-
-                	}
-                }
                 
             }
         }
-
-
-
-
 
 	}
 }

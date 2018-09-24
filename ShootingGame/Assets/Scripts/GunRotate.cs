@@ -17,9 +17,9 @@ public class GunRotate : MonoBehaviour {
 	void Update () 
 	{
 
-		gunpos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		//gunpos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
-		transform.LookAt (gunpos);
+	//	transform.LookAt (gunpos);
 
 		//transform.RotateAround (Gun.transform.position, Vector3.up, GunRouondSpeed * Time.deltaTime);
 		//GunAround ();

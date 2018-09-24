@@ -32,17 +32,12 @@ public class TL : MonoBehaviour {
 
 	void Start () 
 	{
-		
+		TL1 = transform.Find ("TL1").gameObject;
 	}
 	
 
 	void Update ()
 	{
-
-
-		TL1 = transform.Find ("TL1").gameObject;
-
-
 
 		timer += Time.deltaTime;
 
