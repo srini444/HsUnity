@@ -52,14 +52,14 @@ public class TL : MonoBehaviour {
 			transform.Find ("TL1/Yellow1").GetComponent<Renderer> ().material.color = brightYellow;
 			transform.Find ("TL1/Green1").GetComponent<Renderer> ().material.color = dullGreen;
 
-			transform.Find ("TL1/Red2").GetComponent<Renderer> ().material.color = dullRed;
+			transform.Find ("TL1/Red2").GetComponent<Renderer> ().material.color = brightRed;
 			transform.Find ("TL1/Yellow2").GetComponent<Renderer> ().material.color = dullYellow;
-			transform.Find ("TL1/Green2").GetComponent<Renderer> ().material.color = brightGreen;
+			transform.Find ("TL1/Green2").GetComponent<Renderer> ().material.color = dullGreen;
 
 
 			transform.Find ("TL1/Red3").GetComponent<Renderer> ().material.color = dullRed;
-			transform.Find ("TL1/Yellow3").GetComponent<Renderer> ().material.color = dullYellow;
-			transform.Find ("TL1/Green3").GetComponent<Renderer> ().material.color = brightGreen;
+			transform.Find ("TL1/Yellow3").GetComponent<Renderer> ().material.color = brightYellow;
+			transform.Find ("TL1/Green3").GetComponent<Renderer> ().material.color = dullGreen;
 
 
 			level1 = true;
