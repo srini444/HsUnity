@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class RaycastGun : MonoBehaviour {
 
-	Vector3 worldMousePos;
-	public GameObject enemy;
+	public float speedH = 2.0f;
+	public float speedV = 2.0f;
+
+	private float yaw = 0.0f;
+	private float pitch = 0.0f;
+
 	void Start ()
 	{
 
@@ -13,22 +17,10 @@ public class RaycastGun : MonoBehaviour {
 	void Update () 
 	{
 		
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit vHit;
-        
+		yaw += speedH * Input.GetAxis("Mouse X");
+		pitch -= speedV * Input.GetAxis("Mouse Y");
 
-		worldMousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-
-
-        if (Physics.Raycast(ray, out vHit,100))
-        {
-            Debug.DrawRay(Camera.main.transform.position, (vHit.point - Camera.main.transform.position)*50,Color.black);
-
-			if (vHit.transform.tag == "enemy")
-            {
-                
-            }
-        }
+		transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
 
 	}
 }
