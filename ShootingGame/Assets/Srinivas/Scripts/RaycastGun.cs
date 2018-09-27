@@ -15,7 +15,7 @@ public class RaycastGun : MonoBehaviour {
 	public GameObject enemies2;
 	public GameObject enemies3;
 	public GameObject enemies4;
-
+	public GameObject enemies5;
 
 	void Start ()
 	{
@@ -33,6 +33,7 @@ public class RaycastGun : MonoBehaviour {
 
 				GameObject temp4 = (GameObject)Instantiate(enemies4, new Vector3(-6 + 1.5f * r, -0.34f , 7.5f - 5f * t), Quaternion.identity);
 
+				GameObject temp5 = (GameObject)Instantiate(enemies5, new Vector3(-0 + 1.5f * r, -0.34f , 7.5f - 5f * t), Quaternion.identity);
 
 				}
 			}
