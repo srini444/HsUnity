@@ -317,7 +317,6 @@ GameObject:
   - component: {fileID: 107177768}
   - component: {fileID: 107177767}
   - component: {fileID: 107177766}
-  - component: {fileID: 107177765}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -325,19 +324,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &107177765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 107177764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a92ddc2c15ce1b41bdf0a4674548020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedH: 1
-  speedV: 1
 --- !u!81 &107177766
 AudioListener:
   m_ObjectHideFlags: 0
@@ -394,13 +380,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 107177764}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.5, y: 0, z: -2}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: 0.15233448, y: -0, z: -0, w: 0.988329}
+  m_LocalPosition: {x: -1.213, y: 0.387, z: -1.309}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 88438533}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 17.524, y: 0, z: 0}
 --- !u!1001 &255543263
 Prefab:
   m_ObjectHideFlags: 0
@@ -653,7 +639,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4072197404026632, guid: eedb02d5022eae8419dfe61ce8b8db75, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4072197404026632, guid: eedb02d5022eae8419dfe61ce8b8db75, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -699,20 +685,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1624697429439270, guid: eedb02d5022eae8419dfe61ce8b8db75,
     type: 2}
   m_PrefabInternal: {fileID: 477837233}
---- !u!114 &569243798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 569243797}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60ff2bbf045d3194c8fea9f2c2ade99a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunpos: {x: 0, y: 0, z: 0}
-  GunRouondSpeed: 10
-  Gun: {fileID: 0}
 --- !u!65 &569243799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -723,7 +695,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 0.5, z: 0.5}
+  m_Size: {x: 0.5, y: 0.5, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &569243800
 MonoBehaviour:
@@ -736,8 +708,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a92ddc2c15ce1b41bdf0a4674548020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedH: 2
-  speedV: 2
+  speedH: 1
+  speedV: 1
 --- !u!1 &654858115
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +857,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &854300569
 GameObject:
@@ -1702,7 +1674,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4c05d5cfa428927479d3f28b6922a727, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1758,7 +1730,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2056,7 +2028,7 @@ Transform:
   - {fileID: 992282480}
   - {fileID: 654858119}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1615077584
 GameObject:
@@ -2176,7 +2148,7 @@ Transform:
   - {fileID: 1501795562}
   - {fileID: 1437600945}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1908224034 stripped
 GameObject:
@@ -2357,34 +2329,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.54, y: 2.28, z: 0.47}
   m_Center: {x: 0, y: 1.01, z: 0}
---- !u!1 &2011278527
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2011278528}
-  m_Layer: 0
-  m_Name: ShootAudio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2011278528
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2011278527}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 88438533}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2147152656
 GameObject:
   m_ObjectHideFlags: 0
