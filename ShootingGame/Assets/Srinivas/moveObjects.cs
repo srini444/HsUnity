@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateObjects : MonoBehaviour {
+public class moveObjects : MonoBehaviour {
 
-	public float rotateSpeed;
+	public float moveSpeed;
 	void Start () 
 	{
 		
@@ -13,6 +13,8 @@ public class RotateObjects : MonoBehaviour {
 
 	void Update () 
 	{
-		transform.Rotate (0, rotateSpeed*Time.deltaTime, 0);
+		
+		transform.Translate (0, 0, 0.2f*moveSpeed*Time.deltaTime);
+
 	}
 }

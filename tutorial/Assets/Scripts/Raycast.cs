@@ -11,9 +11,7 @@ public class Raycast : MonoBehaviour {
         {
             for (int r = 0; r < 6; r++)
             {
-                GameObject temp = (GameObject)Instantiate(pawn, new Vector3(-2 + 1.5f * r, .5f , 4 - 1.5f * t),
-                                                               
-                    Quaternion.identity);
+                GameObject temp = (GameObject)Instantiate(pawn, new Vector3(-2 + 1.5f * r, .5f , 4 - 1.5f * t), Quaternion.identity);
             }
         }
 
