@@ -201,13 +201,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 107177764}
-  m_LocalRotation: {x: 0.15233448, y: -0, z: -0, w: 0.988329}
-  m_LocalPosition: {x: -1.213, y: 0.387, z: -1.309}
+  m_LocalRotation: {x: 0, y: 0.98832965, z: -0.15233038, w: 0}
+  m_LocalPosition: {x: -1.213, y: 0.5, z: 3.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 17.524, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.524, y: 180, z: 0}
 --- !u!1 &207594188
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,9 +251,9 @@ MonoBehaviour:
   enemies:
   - {fileID: 1637027480408904, guid: 3d98efd3911248c478735dad728336f6, type: 2}
   - {fileID: 1769936190745288, guid: 9f3b2ada96212034899115b636b522c4, type: 2}
-  spawnValues: {x: 20, y: 0, z: 5}
+  spawnValues: {x: 10, y: 0, z: 2}
   spawnWait: 0
-  spawnMosWait: 5
+  spawnMosWait: 0
   spawnLeaWait: 2
   startWait: 1
   stop: 0
@@ -266,15 +266,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4072197404026632, guid: eedb02d5022eae8419dfe61ce8b8db75, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.58
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: 4072197404026632, guid: eedb02d5022eae8419dfe61ce8b8db75, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.367
+      value: 1.029
       objectReference: {fileID: 0}
     - target: {fileID: 4072197404026632, guid: eedb02d5022eae8419dfe61ce8b8db75, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.01
+      value: 2.28
       objectReference: {fileID: 0}
     - target: {fileID: 4072197404026632, guid: eedb02d5022eae8419dfe61ce8b8db75, type: 2}
       propertyPath: m_LocalRotation.x
