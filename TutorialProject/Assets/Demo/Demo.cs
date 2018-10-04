@@ -20,20 +20,21 @@ public class Demo : MonoBehaviour
 
 	private void Awake()
 	{
-		//Instance = this;
+	//	Instance = this;
 	}
 
 
 	private void Update()
 	{
 
+        /*
         Debug.Log(CrossPlatformInputManager.GetAxis("Mouse X"));
 
         if (CrossPlatformInputManager.GetAxis("Mouse X") != 0)
         {
            
         }
-
+*/
 		//Reseting all the bool
 		tap = swipeLeft = swipeRight = swipeUp = swipeDown = false;
 		#region Standalone Inputs

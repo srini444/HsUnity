@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 212951479}
   - component: {fileID: 212951478}
   - component: {fileID: 212951477}
-  - component: {fileID: 212951481}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -198,17 +197,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &212951481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 212951476}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50ead76511144cd48b0e3e675b3ee3b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &395959929
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,25 +666,9 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: 2169821f0567671499a5c10104c69c24, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100010, guid: 2169821f0567671499a5c10104c69c24, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100008, guid: 2169821f0567671499a5c10104c69c24, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 2169821f0567671499a5c10104c69c24, type: 2}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400014, guid: 2169821f0567671499a5c10104c69c24, type: 2}
-      propertyPath: controlStyle
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2169821f0567671499a5c10104c69c24, type: 2}
