@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BulletScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+
+    public Text texScore;
+    int score;
+
+    // Use this for initialization
+    void Start () {
 
 	}
 
@@ -22,6 +27,10 @@ public class BulletScript : MonoBehaviour {
 			Destroy(collision.gameObject);
 
 			gameObject.SetActive(false);
+
+            score++;
+            texScore.text = "Score : " + score;
+
 		}
 	}
 
