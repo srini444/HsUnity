@@ -657,6 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plateform: {fileID: 1184679235105806, guid: 56b05e861c952494186573865174c8ff, type: 2}
+  gameOver: 0
 --- !u!1 &1826334222
 GameObject:
   m_ObjectHideFlags: 0

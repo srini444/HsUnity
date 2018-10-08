@@ -7,22 +7,47 @@ public class PlateformSpawner : MonoBehaviour {
     public GameObject plateform;
     Vector3 lastPos;
     float size;
+    public bool gameOver;
 
 	// Use this for initialization
 	void Start () {
         lastPos = plateform.transform.position;
         size = plateform.transform.localScale.x;
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 20; i++)
         {
-            SpawnZ();
+            SpawanPlatform();
         }
+
+        InvokeRepeating("SpawanPlatform", 2f , 0.2f);
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        if (gameOver)
+        {
+            CancelInvoke("SpawanPlatform");
+        }
+
+    }
+
+    void SpawanPlatform()
+    {
+        if (gameOver)
+        {
+            return;
+        }
+      int rand = Random.Range(0, 6);
+        if (rand < 3)
+        {
+            SpawnX();
+        }
+        else if(rand > 3)
+        {
+            SpawnZ();
+        }
+    }
 
     void SpawnX()
     {

@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 4900671966522574}
   - component: {fileID: 65158964813721368}
   - component: {fileID: 114025867990179570}
+  - component: {fileID: 114775906040612684}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -82,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1640311508463862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.034, y: 0.136, z: 0.732}
+  m_LocalPosition: {x: 0.064, y: 0.136, z: 0.997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4900671966522574}
@@ -94,15 +95,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1656977494211604}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64, y: 0.647, z: 1.734}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.936, y: 1.076, z: 1.734}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4073092965928704}
   - {fileID: 4784663081783546}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!23 &23283084344006110
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -249,6 +250,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedH: 2
   speedV: 2
+--- !u!114 &114775906040612684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1656977494211604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25c9f7e0d2bed9149ab1c228eff71bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114966535008022772
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class BulletScript : MonoBehaviour {
 
 
-    public Text texScore;
-    int score;
+  
 
     // Use this for initialization
     void Start () {
@@ -28,8 +27,7 @@ public class BulletScript : MonoBehaviour {
 
 			gameObject.SetActive(false);
 
-            score++;
-            texScore.text = "Score : " + score;
+
 
 		}
 	}
