@@ -7,12 +7,12 @@ public class LookAtScript : MonoBehaviour {
 
 	public GameObject target;
 	//public GameObject enemy;
-	//public Vector3 InitGORot;
+	public Vector3 InitGORot;
 	Vector3 direction;
 
 	void Start()
 	{
-		//InitGORot = transform.eulerAngles;
+		InitGORot = transform.eulerAngles;
 	}
 
 
@@ -34,7 +34,7 @@ public class LookAtScript : MonoBehaviour {
 
 			transform.Translate (direction * Time.deltaTime);
 
-			//transform.eulerAngles = new Vector3 (InitGORot.x, transform.eulerAngles.y, InitGORot.z);
+			transform.eulerAngles = new Vector3 (InitGORot.x, transform.eulerAngles.y, InitGORot.z);
 		}
 
 	}

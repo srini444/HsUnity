@@ -10,11 +10,15 @@ public class Shooting : MonoBehaviour
 
     AudioSource bulletAudio;
 
+   
+
     // Use this for initialization
     void Start()
     {
 
         bulletAudio = GetComponent<AudioSource>();
+
+
 
     }
 
@@ -42,4 +46,8 @@ public class Shooting : MonoBehaviour
         }
 
     }
+
+
+
+
 }
