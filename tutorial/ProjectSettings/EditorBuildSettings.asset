@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Swipe/Swipe.unity
-    guid: 75a29507d71170f4ca9406ee781acc36
+    path: Assets/Scenes/Demo.unity
+    guid: f815be1bb4aefce438f22e12a0c57271

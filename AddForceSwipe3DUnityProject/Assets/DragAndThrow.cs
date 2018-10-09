@@ -26,5 +26,5 @@ public class DragAndThrow : MonoBehaviour {
             direction = startPos - endPos;
             GetComponent<Rigidbody>().AddForce(-direction / timeInterval * throwForce);
         }
-    }
+        }
 }

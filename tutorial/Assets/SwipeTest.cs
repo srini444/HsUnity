@@ -14,20 +14,22 @@ public class SwipeTest : MonoBehaviour
 
     Vector3 startPos;
     Vector3 endPos;
+    Vector3 direction;
 
     float swipeDistance;
     float swipeTime;
 
     public GameObject Player;
 
+    [Range(0.05f, 1f)]
+    public float throwForce = 0.3f;
 
-    // Use this for initialization
-	void Start ()
+   
+    void Start ()
     {
 		
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
         if (Input.touchCount > 0)
@@ -37,10 +39,7 @@ public class SwipeTest : MonoBehaviour
             if (touch.phase == TouchPhase.Began)
             {
                 startTime = Time.time;
-                startPos = touch.position;
-                
-
-
+                startPos = touch.position;             
             }
 
             else if (touch.phase == TouchPhase.Ended)
@@ -61,7 +60,8 @@ public class SwipeTest : MonoBehaviour
 
         }
 
-	}
+
+    }
 
     void swipe()
     {
@@ -97,5 +97,25 @@ public class SwipeTest : MonoBehaviour
 
     }
 
+
+    void jumpMove()
+    {
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            startTime = Time.time;
+            startPos = Input.GetTouch(0).position;
+        }
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        {
+            endTime = Time.time;
+            swipeTime = endTime - startTime;
+            endPos = Input.GetTouch(0).position;
+            direction = startPos - endPos;
+            GetComponent<Rigidbody>().AddForce(-direction / swipeTime * throwForce);
+        }
+
+
+    }
 
 }

@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 325605217}
   - component: {fileID: 325605214}
   - component: {fileID: 325605218}
+  - component: {fileID: 325605219}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -238,12 +239,27 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 325605212}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a403d16af868994e8b4b5daca0d16ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 500
+--- !u!114 &325605219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325605212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a344ce19c53364488cda9be976ab3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTime: 5
+  minSwipeDistance: 30
+  Player: {fileID: 325605212}
+  throwForce: 0.3
 --- !u!1 &722008980
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +481,7 @@ MonoBehaviour:
   maxTime: 0.5
   minSwipeDistance: 50
   Player: {fileID: 325605212}
+  throwForce: 0.3
 --- !u!1 &1550878559
 GameObject:
   m_ObjectHideFlags: 0
