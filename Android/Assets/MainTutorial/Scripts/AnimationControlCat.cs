@@ -8,7 +8,7 @@ public class AnimationControlCat : MonoBehaviour {
     Rigidbody catRB;
 
     float RotateSpeed = 30f;
-    float speed = 5f;
+
 
     public float increseScaleSpeed = 5f;
     Vector3 tempScale;
@@ -123,10 +123,5 @@ public class AnimationControlCat : MonoBehaviour {
     }
 
    
-    public void Jump()
-    {
-
-       
-
-    }
+   
 }

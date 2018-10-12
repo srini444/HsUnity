@@ -22,8 +22,6 @@ public class UI : MonoBehaviour {
 
         catAnim.Play("Idle", -1, 0f);
         catAnim.speed = 1f;
-        catAudio.Play();
-
 
     }
 	
@@ -51,13 +49,14 @@ public class UI : MonoBehaviour {
     {
         catAnim.Play("Walk", -1, 0f);
         catAnim.speed = 1f;
-        
+        catAudio.Play();
     }
 
     public void Eat()
     {
         catAnim.Play("Eat", -1, 0f);
         catAnim.speed = 1f;
+        catAudio.Play();
 
     }
 

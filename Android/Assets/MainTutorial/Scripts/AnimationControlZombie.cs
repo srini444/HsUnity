@@ -7,7 +7,7 @@ public class AnimationControlZombie : MonoBehaviour {
     Animator zombieAnimation;
     Rigidbody playerRB;
 
-    float speed = 5f;
+   // float speed = 5f;
 
     void Start ()
     {
