@@ -10,6 +10,7 @@ public class UI : MonoBehaviour {
     Vector3 tempScale;
     float increseScaleSpeed = 5f;
     bool rotate = false;
+    bool zoom = false;
     AudioSource catAudio;
     //AudioSource cAudio;
 
@@ -35,6 +36,15 @@ public class UI : MonoBehaviour {
         if (rotate)
         {
             transform.Rotate(0, 2 * RotateSpeed * Time.deltaTime, 0);
+        }
+
+        if (zoom)
+        {
+            tempScale = transform.localScale;
+            tempScale.x += 1f * increseScaleSpeed * Time.deltaTime;
+            tempScale.y += 1f * increseScaleSpeed * Time.deltaTime;
+            tempScale.z += 1f * increseScaleSpeed * Time.deltaTime;
+            transform.localScale = tempScale;
         }
               
     }
@@ -79,11 +89,10 @@ public class UI : MonoBehaviour {
 
     public void ZoomIn()
     {
-        tempScale = transform.localScale;
-        tempScale.x += 1f * increseScaleSpeed * Time.deltaTime;
-        tempScale.y += 1f * increseScaleSpeed * Time.deltaTime;
-        tempScale.z += 1f * increseScaleSpeed * Time.deltaTime;
-        transform.localScale = tempScale;
+        if (!zoom)
+            zoom = true;
+        else
+            zoom = false;
     }
 
     public void ZoomOut()
