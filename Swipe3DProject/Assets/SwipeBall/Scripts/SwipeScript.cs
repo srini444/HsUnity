@@ -1,63 +1,63 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwipeScript : MonoBehaviour {
 
-	Vector2 startPos, endPos, direction; // touch start position, touch end position, swipe direction
-	float touchTimeStart, touchTimeFinish, timeInterval; // to calculate swipe time to sontrol throw force in Z direction
+	Vector2 startPos, endPos, direction; 
+	float touchTimeStart, touchTimeFinish, timeInterval; 
 
 	[SerializeField]
-	float throwForceInXandY = 1f; // to control throw force in X and Y directions
+	float throwForceInXandY = 1f; 
 
 	[SerializeField]
-	float throwForceInZ = 50f; // to control throw force in Z direction
+	float throwForceInZ = 50f; 
 
 	Rigidbody rb;
 
+    public Text txtScore;
+    int Score;
+    
 	void Start()
 	{
 		rb = GetComponent<Rigidbody> ();
        
     }
 
-	// Update is called once per frame
-	void Update () {
+	
+	void Update ()
+    {
 
-        // if you touch the screen
         if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Began)
         {
-
-			// getting touch position and marking time when you touch the screen
-			touchTimeStart = Time.time;
+            touchTimeStart = Time.time;
 			startPos = Input.GetTouch (0).position;
 		}
 
-		// if you release your finger
+		
 		if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Ended)
         {
-
-			// marking time when you release it
-			touchTimeFinish = Time.time;
-
-			// calculate swipe time interval 
-			timeInterval = touchTimeFinish - touchTimeStart;
-
-			// getting release finger position
-			endPos = Input.GetTouch (0).position;
-
-			// calculating swipe direction in 2D space
-			direction = startPos - endPos;
-
-			// add force to balls rigidbody in 3D space depending on swipe time, direction and throw forces
+            touchTimeFinish = Time.time;
+            timeInterval = touchTimeFinish - touchTimeStart;
+            endPos = Input.GetTouch (0).position;
+            direction = startPos - endPos;
+            	
 			rb.isKinematic = false;
 			rb.AddForce (- direction.x * throwForceInXandY, - direction.y * throwForceInXandY, throwForceInZ / timeInterval);
-            
-
-			// Destroy ball in 4 seconds
-			Destroy (gameObject, 3f);
-
-		}
+            Destroy (gameObject, 2f);
+        }
 			
 	}
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Coin")
+        {
+            Score++;
+            txtScore.text = "Score : " + Score;
+        }
+    }
+    
 }

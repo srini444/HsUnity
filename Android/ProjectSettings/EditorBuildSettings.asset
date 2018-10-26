@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MainTutorial/Animation.unity
-    guid: be32337ba29fd1a4386066e2258deb19
+    path: Assets/LokeshGame/Scenes/MainLokesh.unity
+    guid: b8f65b17fd54d754699b841465500cd8
