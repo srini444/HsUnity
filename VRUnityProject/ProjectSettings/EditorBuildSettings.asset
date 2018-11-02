@@ -5,6 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Cube.unity
-    guid: bec6e492053029f47b4813aa74382482
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: cfa9e59e921748b48a9ea62300a10f13
