@@ -15,9 +15,7 @@ public class SwipeScript : MonoBehaviour {
 	float throwForceInZ = 50f; 
 
 	Rigidbody rb;
-
-    public Text txtScore;
-    int Score;
+ 
     
 	void Start()
 	{
@@ -49,15 +47,5 @@ public class SwipeScript : MonoBehaviour {
         }
 			
 	}
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Coin")
-        {
-            Score++;
-            txtScore.text = "Score : " + Score;
-        }
-    }
-    
+     
 }
