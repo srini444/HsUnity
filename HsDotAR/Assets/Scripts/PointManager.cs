@@ -6,11 +6,13 @@ public class PointManager : MonoBehaviour {
 
     public Text txtScore;
     int score;
-    
+    Rigidbody rb;
+
     // Use this for initialization
 	void Start ()
     {
-		
+        rb = GetComponent<Rigidbody>();
+        rb.isKinematic = false;
 	}
 	
 	// Update is called once per frame
@@ -25,6 +27,7 @@ public class PointManager : MonoBehaviour {
         {
             score++;
             txtScore.text = "Points : " + score;
+            rb.isKinematic = true;
         }
     }
 

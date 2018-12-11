@@ -16,6 +16,7 @@ public class Dot : MonoBehaviour
     void Start ()
     {
         CreateDot();
+        
     }
 	
     void Update ()
