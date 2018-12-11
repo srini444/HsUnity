@@ -50,7 +50,7 @@ public class Dot : MonoBehaviour
                 {
                     dotInsstance.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-10.0f, 10.0f), Random.Range(50.0f, 10.0f)) * dotForce * Time.deltaTime, ForceMode.Impulse);
                     print("forward");
-                    Invoke("CreateDot", 3f);
+                    Invoke("CreateDot", 4f);
                 }
      
             }
