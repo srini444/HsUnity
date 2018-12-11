@@ -861,11 +861,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.56
+      value: -2.68
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -7.27
+      value: -7.92
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalRotation.x
