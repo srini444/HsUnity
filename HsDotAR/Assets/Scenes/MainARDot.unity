@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 478682506}
   m_Layer: 0
   m_Name: ARCamera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,7 +382,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 478682505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: -2.58, z: -9.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -861,15 +861,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.53
+      value: -2.56
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -4.42
+      value: -7.27
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.17364825
+      value: -0.08715578
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalRotation.y
@@ -881,7 +881,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9848078
+      value: 0.9961947
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_RootOrder
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1004,7 +1004,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: da42b6ef4f0b23b459367a86760557e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: da42b6ef4f0b23b459367a86760557e3, type: 3}
       propertyPath: m_LocalPosition.z
