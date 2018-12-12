@@ -6,13 +6,15 @@ public class PointManager : MonoBehaviour {
 
     public Text txtScore;
     int score;
-    Rigidbody rb;
+    AudioSource dotMiss , prefectShot;
+    
 
     // Use this for initialization
-	void Start ()
+    void Start ()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.isKinematic = false;
+        dotMiss = GetComponent<AudioSource>();
+        prefectShot = GetComponent<AudioSource>();
+
 	}
 	
 	// Update is called once per frame
@@ -27,10 +29,10 @@ public class PointManager : MonoBehaviour {
         {
             score++;
             txtScore.text = "Points : " + score;
-            rb.isKinematic = true;
+            prefectShot.Play();        
         }
+        
     }
-
 
    
 }
