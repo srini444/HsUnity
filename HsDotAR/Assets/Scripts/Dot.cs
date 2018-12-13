@@ -13,11 +13,13 @@ public class Dot : MonoBehaviour
     float minSwipeDistance = 15f;
     float zDepth;
 
+   
     AudioSource arrowSound;
     void Start ()
     {
         CreateDot();
         arrowSound = GetComponent<AudioSource>();
+        
     }
 	
     void Update ()
@@ -32,8 +34,8 @@ public class Dot : MonoBehaviour
             if (angle < -10.0F)
             {
                 arrowSound.Play();
-                arrowSound.PlayDelayed(1f);
-                dotInsstance.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-10.0f, 10.0f), Random.Range(50.0f, 10.0f)) * dotForce * Time.deltaTime, ForceMode.Impulse);
+                
+                dotInsstance.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(Random.Range(-3.5f, 3.50f), Random.Range(0.0f, 5.0f), Random.Range(10f, 20.0f)) * dotForce * Time.deltaTime, ForceMode.Impulse);
                 print("turn left");
                 Invoke("CreateDot", 3f);
             }
@@ -41,8 +43,8 @@ public class Dot : MonoBehaviour
             else if (angle > 10.0F)
             {
                 arrowSound.Play();
-                arrowSound.PlayDelayed(1f);
-                dotInsstance.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-10.0f, 10.0f), Random.Range(50.0f, 10.0f)) * dotForce * Time.deltaTime, ForceMode.Impulse);
+                
+                dotInsstance.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(Random.Range(-3.5f, 3.5f), Random.Range(0.0f, 5.0f), Random.Range(10f, 20.0f)) * dotForce * Time.deltaTime, ForceMode.Impulse);
                 print("turn right");
                 Invoke("CreateDot", 3f);
             }
@@ -50,19 +52,21 @@ public class Dot : MonoBehaviour
             else
             {
                 arrowSound.Play();
-                arrowSound.PlayDelayed(1f);
-                dotInsstance.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-10.0f, 10.0f), Random.Range(50.0f, 10.0f)) * dotForce * Time.deltaTime, ForceMode.Impulse);
+               
+                dotInsstance.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(Random.Range(-3.5f, 3.5f), Random.Range(0.0f, 5.0f), Random.Range(10f, 20.0f)) * dotForce * Time.deltaTime, ForceMode.Impulse);
                 print("forward");
                 Invoke("CreateDot", 3f);
             }
      
         }
+    
 
     }
 
     void CreateDot()
     {
-        dotInsstance = Instantiate(dotPrefab, dotPrefab.transform.position, dotPrefab.transform.rotation) as GameObject;      
+        dotInsstance = Instantiate(dotPrefab, dotPrefab.transform.position, dotPrefab.transform.rotation) as GameObject;
+        
     }
 
 }

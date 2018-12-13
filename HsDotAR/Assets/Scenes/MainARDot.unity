@@ -498,8 +498,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.4, y: -3}
+  m_SizeDelta: {x: 86.6, y: 86.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &415028963
 MonoBehaviour:
@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 833761125}
   - component: {fileID: 833761124}
   m_Layer: 5
-  m_Name: Resume
+  m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -785,7 +785,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 833761125}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1781019312}
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &833761125
@@ -833,7 +844,7 @@ GameObject:
   - component: {fileID: 901416658}
   - component: {fileID: 901416657}
   m_Layer: 5
-  m_Name: Play
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -896,7 +907,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 901416658}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1781019312}
+        m_MethodName: LoadMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &901416658
@@ -1569,7 +1591,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Resume
+  m_Text: Play
 --- !u!222 &1520107168
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1691,7 +1713,37 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1983928088966826, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65782181539348316, guid: 52b8a3ba78d75aa4cb9636e1169cf7db,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.0046739476
+      objectReference: {fileID: 0}
+    - target: {fileID: 65782181539348316, guid: 52b8a3ba78d75aa4cb9636e1169cf7db,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.03310572
+      objectReference: {fileID: 0}
+    - target: {fileID: 65782181539348316, guid: 52b8a3ba78d75aa4cb9636e1169cf7db,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0.00023058728
+      objectReference: {fileID: 0}
+    - target: {fileID: 65782181539348316, guid: 52b8a3ba78d75aa4cb9636e1169cf7db,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0.0004063859
+      objectReference: {fileID: 0}
+    - target: {fileID: 65782181539348316, guid: 52b8a3ba78d75aa4cb9636e1169cf7db,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.12129142
+      objectReference: {fileID: 0}
+    - target: {fileID: 65782181539348316, guid: 52b8a3ba78d75aa4cb9636e1169cf7db,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 0.0016564714
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
@@ -1763,7 +1815,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Game
+  m_Text: Main Menu
 --- !u!222 &1620902836
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1957,7 +2009,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1807543729}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1781019312}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1807543729
@@ -2025,10 +2088,10 @@ RectTransform:
   m_Father: {fileID: 1781019311}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.76625, y: 0.8834063}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -81, y: -81}
-  m_SizeDelta: {x: 75, y: 75}
+  m_AnchoredPosition: {x: 12.500005, y: 2}
+  m_SizeDelta: {x: -112, y: -91}
   m_Pivot: {x: 0.49999988, y: 0.5}
 --- !u!114 &1873227739
 MonoBehaviour:
@@ -2189,12 +2252,12 @@ GameObject:
   - component: {fileID: 1928408763}
   - component: {fileID: 1928408762}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PauseMenuUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1928408761
 RectTransform:
   m_ObjectHideFlags: 0
