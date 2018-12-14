@@ -5,7 +5,8 @@ using UnityEngine;
 public class DartArrow : MonoBehaviour {
 
 	// Use this for initialization
-	IEnumerator waitAndDestroy () {
+	IEnumerator waitAndDestroy ()
+    {
 
         yield return new WaitForSeconds(4);
         Dot.manager.CreateDot();

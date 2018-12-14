@@ -39,8 +39,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4684787991477242}
   - component: {fileID: 54977669569521794}
-  - component: {fileID: 114927110617331584}
   - component: {fileID: 65593588864647436}
+  - component: {fileID: 114495931587165186}
   m_Layer: 0
   m_Name: Dot
   m_TagString: Untagged
@@ -248,7 +248,7 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
---- !u!114 &114927110617331584
+--- !u!114 &114495931587165186
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -256,6 +256,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1983928088966826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49d9db215fe7095428388c03d4a67a9e, type: 3}
+  m_Script: {fileID: 11500000, guid: ff8d9f7a30a30c94a94d4bedf73da728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectSwipeOnlyAfterRelease: 0
+  SWIPE_THRESHOLD: 20
+  speed: 50
+  dotPrefab: {fileID: 1983928088966826}
