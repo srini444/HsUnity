@@ -25,7 +25,7 @@ public class PointManager : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Dot") ;
+        if (other.name == "Dot");
         {
             score++;
             txtScore.text = "Points : " + score;
@@ -33,7 +33,15 @@ public class PointManager : MonoBehaviour {
         }
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Board")
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().isKinematic = true;
 
-  
+        }
+    }
+
 
 }

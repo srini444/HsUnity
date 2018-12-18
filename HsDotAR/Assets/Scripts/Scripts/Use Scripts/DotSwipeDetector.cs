@@ -13,21 +13,11 @@ public class DotSwipeDetector : MonoBehaviour
 
     public GameObject dotPrefab;
     GameObject dotInsstance;
-    public static Dot manager;
-
-    IEnumerator waitAndDestroy()
-    {
-
-        yield return new WaitForSeconds(4);
-        Dot.manager.CreateDot();
-        Destroy(gameObject);
-    }
-
-
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        CreateDot();
+       // rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -48,7 +38,7 @@ public class DotSwipeDetector : MonoBehaviour
                 if (!detectSwipeOnlyAfterRelease)
                 {
                     fingerDown = touch.position;
-                    checkSwipe();
+                    checkSwipe();                
                 }
             }
 
@@ -57,6 +47,7 @@ public class DotSwipeDetector : MonoBehaviour
             {
                 fingerDown = touch.position;
                 checkSwipe();
+                Invoke("CreateDot", 3f);
             }
         }
     }
@@ -110,16 +101,12 @@ public class DotSwipeDetector : MonoBehaviour
         return Mathf.Abs(fingerDown.x - fingerUp.x);
     }
 
-    //////////////////////////////////CALLBACK FUNCTIONS/////////////////////////////
+
     void OnSwipeUp()
     {
         Debug.Log("Swipe UP");
-        rb.AddForce(Random.Range(-1.0f, 1.0f), 5f, 15f, ForceMode.Impulse);
-        //  rb.AddForce(0f,5f, 15f ,ForceMode.VelocityChange);
-        //  rb.AddForce(0f, 5f, 15f, ForceMode.Acceleration);
-        //  rb.AddForce(0f, 5f, 15f, ForceMode.Force);
-
-
+        dotInsstance.GetComponent<Rigidbody>().AddForce(Random.Range(-1.0f, 1.0f), 5f, 15f, ForceMode.Impulse);
+        //rb.AddForce(Random.Range(-1.0f, 1.0f), 5f, 15f, ForceMode.Impulse);       
     }
 
     void OnSwipeDown()
@@ -130,19 +117,19 @@ public class DotSwipeDetector : MonoBehaviour
     void OnSwipeLeft()
     {
         Debug.Log("Swipe Left");
-        rb.AddForce(Random.Range(-0.5f, -4f), 5f, 10f, ForceMode.Impulse);
+        dotInsstance.GetComponent<Rigidbody>().AddForce(Random.Range(-1.0f, 1.0f), 5f, 15f, ForceMode.Impulse);
+        //rb.AddForce(Random.Range(-0.5f, -4f), 5f, 10f, ForceMode.Impulse);
     }
 
     void OnSwipeRight()
     {
         Debug.Log("Swipe Right");
-        rb.AddForce(Random.Range(0.5f, 4f), 5f, 10f, ForceMode.Impulse);
-
+        dotInsstance.GetComponent<Rigidbody>().AddForce(Random.Range(-1.0f, 1.0f), 5f, 15f, ForceMode.Impulse);
+        //rb.AddForce(Random.Range(0.5f, 4f), 5f, 10f, ForceMode.Impulse);
     }
-
     public void CreateDot()
     {
-        dotInsstance = Instantiate(dotPrefab, dotPrefab.transform.position, dotPrefab.transform.rotation) as GameObject;
-
+         dotInsstance = Instantiate(dotPrefab, dotPrefab.transform.position, dotPrefab.transform.rotation) as GameObject;
+        //dotInsstance = Instantiate(dotPrefab, dotPrefab.transform.position, Quaternion.identity) as GameObject;
     }
 }
