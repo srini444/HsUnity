@@ -17,8 +17,7 @@ public class DotSwipeDetector : MonoBehaviour
     void Start()
     {
         CreateDot();
-       // rb = GetComponent<Rigidbody>();
-    }
+       }
 
     // Update is called once per frame
     void Update()
@@ -48,6 +47,7 @@ public class DotSwipeDetector : MonoBehaviour
                 fingerDown = touch.position;
                 checkSwipe();
                 Invoke("CreateDot", 3f);
+                //Destroy(gameObject, 5f);
             }
         }
     }
@@ -132,4 +132,6 @@ public class DotSwipeDetector : MonoBehaviour
          dotInsstance = Instantiate(dotPrefab, dotPrefab.transform.position, dotPrefab.transform.rotation) as GameObject;
         //dotInsstance = Instantiate(dotPrefab, dotPrefab.transform.position, Quaternion.identity) as GameObject;
     }
+
+
 }
