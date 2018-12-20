@@ -15,10 +15,11 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private float nextFire = 0.0f;
 
+    public bool isSpeedBoastActive = false;
     public bool canTripleShoot = false;
     // Use this for initialization
 
-
+    
     void Start ()
     {
 		
@@ -56,8 +57,22 @@ public class Player : MonoBehaviour {
     {
         float hInputs = Input.GetAxis("Horizontal");
         float vInputs = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.right * speed * hInputs * Time.deltaTime);
-        transform.Translate(Vector3.up * speed * vInputs * Time.deltaTime);
+        //if speed boost enable
+        //move 1.5x the normal speed
+        //else
+        // move normal 
+
+        if(isSpeedBoastActive == true)
+        {
+            transform.Translate(Vector3.right * speed * 1.5f * hInputs * Time.deltaTime);
+            transform.Translate(Vector3.up * speed * 1.5f * vInputs * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector3.right * speed * hInputs * Time.deltaTime);
+            transform.Translate(Vector3.up * speed * vInputs * Time.deltaTime);
+        }
+        
 
 
         if (transform.position.y > 0)
@@ -84,10 +99,23 @@ public class Player : MonoBehaviour {
         canTripleShoot = true;
         StartCoroutine(TripleShotPowerDownRoutione());
     }
+
+    public void SpeedBoastPowerUpon()
+    {
+        isSpeedBoastActive = true;
+        StartCoroutine(SpeedBoastPowerDownRoutione());
+    }
+
     public IEnumerator TripleShotPowerDownRoutione()
     {
         yield return new WaitForSeconds(5.0f);
         canTripleShoot = false;
+    }
+
+    public IEnumerator SpeedBoastPowerDownRoutione()
+    {
+        yield return new WaitForSeconds(5.0f);
+        isSpeedBoastActive = false;
     }
 
 }

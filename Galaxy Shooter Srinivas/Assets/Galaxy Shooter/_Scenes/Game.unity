@@ -397,8 +397,8 @@ MonoBehaviour:
     type: 2}
   fireRate: 0.25
   nextFire: 0
+  isSpeedBoastActive: 0
   canTripleShoot: 0
-  isSpeedBostActive: 0
 --- !u!61 &751278209
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -530,8 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e2a9945604522449c4330cfb62f150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  powerID: 1
+  speed: 3
+  powerID: 0
 --- !u!58 &767763131
 CircleCollider2D:
   m_ObjectHideFlags: 0
