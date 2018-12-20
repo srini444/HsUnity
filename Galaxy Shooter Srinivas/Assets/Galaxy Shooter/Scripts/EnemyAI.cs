@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour {
-
-    // variable for your speed 
+    [SerializeField]
+    private GameObject enemyExplosionPrefab;
     private float speed = 5.0f;
+
 
 	// Use this for initialization
 	void Start ()
@@ -36,6 +37,7 @@ public class EnemyAI : MonoBehaviour {
                 Destroy(other.transform.parent.gameObject);
             }
             Destroy(other.gameObject);
+            Instantiate(enemyExplosionPrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
         else if(other.tag == "Player")
@@ -45,6 +47,7 @@ public class EnemyAI : MonoBehaviour {
             {
                 player.Damage();
             }
+            Instantiate(enemyExplosionPrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

@@ -6,7 +6,8 @@ public class Laser : MonoBehaviour {
     public float speed = 10;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 		
 	}
 	
