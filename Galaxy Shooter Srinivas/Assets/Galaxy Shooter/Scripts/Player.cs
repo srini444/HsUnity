@@ -17,7 +17,10 @@ public class Player : MonoBehaviour {
 
     public bool canTripleShoot = false;
     // Use this for initialization
-    void Start () {
+
+
+    void Start ()
+    {
 		
 	}
 	
@@ -74,6 +77,17 @@ public class Player : MonoBehaviour {
         {
             transform.position = new Vector3(9, transform.position.y, 0);
         }
+    }
+
+    public void TripleShotPowerUpon()
+    {
+        canTripleShoot = true;
+        StartCoroutine(TripleShotPowerDownRoutione());
+    }
+    public IEnumerator TripleShotPowerDownRoutione()
+    {
+        yield return new WaitForSeconds(5.0f);
+        canTripleShoot = false;
     }
 
 }
