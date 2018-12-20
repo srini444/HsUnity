@@ -20,8 +20,14 @@ public class Player : MonoBehaviour {
 
     public int lives = 3;
     // Use this for initialization
+    [SerializeField]
+    private GameObject explosionPrefab;
 
-    
+    public bool shieldsActive = false;
+
+    [SerializeField]
+    private GameObject shieldsGameobject;
+
     void Start ()
     {
 		
@@ -99,9 +105,17 @@ public class Player : MonoBehaviour {
     public void Damage()
     {
         //subtract 1 life from the player
+        if(shieldsActive == true)
+        {
+            shieldsActive = false;
+            shieldsGameobject.SetActive(false);
+            return;
+        }
+
         lives--;
         if (lives < 1)
         {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
 
@@ -121,6 +135,11 @@ public class Player : MonoBehaviour {
         StartCoroutine(SpeedBoastPowerDownRoutione());
     }
 
+    public void EnableShields()
+    {
+        shieldsActive = true;
+        shieldsGameobject.SetActive(true);
+    }
     public IEnumerator TripleShotPowerDownRoutione()
     {
         yield return new WaitForSeconds(5.0f);

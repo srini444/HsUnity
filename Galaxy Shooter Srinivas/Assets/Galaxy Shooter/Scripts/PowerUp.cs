@@ -44,6 +44,7 @@ public class PowerUp : MonoBehaviour {
                 else if(powerID == 2)
                 {
                     //enable shiedls
+                    player.EnableShields();
                 }
 
                 
