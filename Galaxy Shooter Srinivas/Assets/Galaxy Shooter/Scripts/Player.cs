@@ -17,6 +17,8 @@ public class Player : MonoBehaviour {
 
     public bool isSpeedBoastActive = false;
     public bool canTripleShoot = false;
+
+    public int lives = 3;
     // Use this for initialization
 
     
@@ -92,6 +94,19 @@ public class Player : MonoBehaviour {
         {
             transform.position = new Vector3(9, transform.position.y, 0);
         }
+    }
+
+    public void Damage()
+    {
+        //subtract 1 life from the player
+        lives--;
+        if (lives < 1)
+        {
+            Destroy(this.gameObject);
+        }
+
+        // if lives < 1 (meaning 0)
+        //destory this object
     }
 
     public void TripleShotPowerUpon()
