@@ -108,7 +108,7 @@ public class Player : MonoBehaviour {
         if(shieldsActive == true)
         {
             shieldsActive = false;
-            shieldsGameobject.SetActive(false);
+            shieldsGameobject.SetActive(false); 
             return;
         }
 
