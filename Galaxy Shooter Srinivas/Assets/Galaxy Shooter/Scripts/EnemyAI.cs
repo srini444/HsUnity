@@ -6,12 +6,12 @@ public class EnemyAI : MonoBehaviour {
     [SerializeField]
     private GameObject enemyExplosionPrefab;
     private float speed = 5.0f;
-
+    private UIManager ui;
 
 	// Use this for initialization
 	void Start ()
-    {
-		
+    {        
+        ui = GameObject.Find("Canvas").GetComponent<UIManager>();
 	}
 	
 	// Update is called once per frame
@@ -38,6 +38,7 @@ public class EnemyAI : MonoBehaviour {
             }
             Destroy(other.gameObject);
             Instantiate(enemyExplosionPrefab, transform.position, Quaternion.identity);
+            ui.UpdateScore();
             Destroy(this.gameObject);
         }
         else if(other.tag == "Player")

@@ -27,10 +27,20 @@ public class Player : MonoBehaviour {
 
     [SerializeField]
     private GameObject shieldsGameobject;
+    private GameManager gameManager;
 
+
+    private UIManager UIManager;
     void Start ()
     {
-		
+        transform.position = new Vector3(0, 0, 0);
+        UIManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        if (UIManager != null)
+        {
+            UIManager.UpdateLives(lives);
+            
+        }
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -113,14 +123,15 @@ public class Player : MonoBehaviour {
         }
 
         lives--;
+        UIManager.UpdateLives(lives);
         if (lives < 1)
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            gameManager.GameOver = true;
+            UIManager.ShowTitlescreen();
             Destroy(this.gameObject);
         }
 
-        // if lives < 1 (meaning 0)
-        //destory this object
     }
 
     public void TripleShotPowerUpon()
