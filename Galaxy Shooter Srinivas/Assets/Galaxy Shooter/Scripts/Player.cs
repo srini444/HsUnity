@@ -31,6 +31,8 @@ public class Player : MonoBehaviour {
     private SpawnManager spawnManager;
 
     private UIManager UIManager;
+    private AudioSource audioSource;
+
     void Start ()
     {
         transform.position = new Vector3(0, 0, 0);
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour {
         {
             spawnManager.StartSpawnRoutine();
         }
+        audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -61,6 +64,7 @@ public class Player : MonoBehaviour {
 
     private void Shoot()
     {
+        audioSource.Play();
         if (Time.time > nextFire)
         {
             if(canTripleShoot == true)

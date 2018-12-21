@@ -9,6 +9,8 @@ public class PowerUp : MonoBehaviour {
     [SerializeField]
     private int powerID; // 0 == triple shot 1 speed boot 2 shields
                          // Use this for initialization
+    [SerializeField]
+    private AudioClip _clip;
 
     void Start ()
     {
@@ -28,8 +30,8 @@ public class PowerUp : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Collied with " + other.name);
-        
-        if(other.tag == "Player")
+        AudioSource.PlayClipAtPoint(_clip, Camera.main.transform.position, 1f);
+        if (other.tag == "Player")
         {
             Player player = other.GetComponent<Player>();
             if(player != null)
