@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private GameObject shieldsGameobject;
     private GameManager gameManager;
-
+    private SpawnManager spawnManager;
 
     private UIManager UIManager;
     void Start ()
@@ -41,6 +41,11 @@ public class Player : MonoBehaviour {
             
         }
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
+        if(spawnManager != null)
+        {
+            spawnManager.StartSpawnRoutine();
+        }
 	}
 	
 	// Update is called once per frame
