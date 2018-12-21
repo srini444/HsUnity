@@ -32,6 +32,9 @@ public class Player : MonoBehaviour {
 
     private UIManager UIManager;
     private AudioSource audioSource;
+    [SerializeField]
+    private GameObject[] engine;
+    private int hitCount = 0;
 
     void Start ()
     {
@@ -49,6 +52,7 @@ public class Player : MonoBehaviour {
             spawnManager.StartSpawnRoutine();
         }
         audioSource = GetComponent<AudioSource>();
+        hitCount = 0;
 	}
 	
 	// Update is called once per frame
@@ -123,12 +127,24 @@ public class Player : MonoBehaviour {
 
     public void Damage()
     {
+
+        
         //subtract 1 life from the player
+
         if(shieldsActive == true)
         {
             shieldsActive = false;
             shieldsGameobject.SetActive(false); 
             return;
+        }
+        hitCount++;
+        if (hitCount == 1)
+        {
+            engine[0].SetActive(true);
+        }
+        else if (hitCount == 2)
+        {
+            engine[1].SetActive(true);
         }
 
         lives--;
