@@ -45,7 +45,7 @@ public class DotSwipeDetector : MonoBehaviour
             {
                 fingerDown = touch.position;
                 checkSwipe();
-                Invoke("CreateDot", 3f);
+                Invoke("CreateDot", 5f);
                
             }
         }
@@ -104,7 +104,7 @@ public class DotSwipeDetector : MonoBehaviour
     void OnSwipeUp()
     {
         Debug.Log("Swipe UP");
-        dotInsstance.GetComponent<Rigidbody>().AddForce(Random.Range(-1.0f, 1.0f), Random.Range(4f, 8f), 15f, ForceMode.Impulse);            
+        dotInsstance.GetComponent<Rigidbody>().AddForce(Random.Range(-1.50f, 1.50f), Random.Range(4f, 8f), 15f, ForceMode.Impulse);            
     }
 
     void OnSwipeDown()
@@ -115,13 +115,13 @@ public class DotSwipeDetector : MonoBehaviour
     void OnSwipeLeft()
     {
         Debug.Log("Swipe Left");
-        dotInsstance.GetComponent<Rigidbody>().AddForce(Random.Range(-3.0f, 0.07f), 5f, 15f, ForceMode.Impulse);
+        dotInsstance.GetComponent<Rigidbody>().AddForce(Random.Range(-3.0f, 0f), 5f, 15f, ForceMode.Impulse);
     }
 
     void OnSwipeRight()
     {
         Debug.Log("Swipe Right");
-        dotInsstance.GetComponent<Rigidbody>().AddForce(Random.Range(0.07f, 3f), 5f, 15f, ForceMode.Impulse);        
+        dotInsstance.GetComponent<Rigidbody>().AddForce(Random.Range(0f, 3f), 5f, 15f, ForceMode.Impulse);        
     }
     public void CreateDot()
     {
