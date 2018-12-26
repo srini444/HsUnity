@@ -7,9 +7,9 @@ public class SwipeDetector : MonoBehaviour
     private Vector3 fingerUp;
     public bool detectSwipeOnlyAfterRelease = false;
 
-    public float SWIPE_THRESHOLD = 20f;
+    public float SWIPE_THRESHOLD = 10f;
     Rigidbody rb;
-    public float speed = 50f;
+    public float speed = 5f;
 
     void Start()
     {
@@ -82,7 +82,7 @@ public class SwipeDetector : MonoBehaviour
         //No Movement at-all
         else
         {
-            //Debug.Log("No Swipe!");
+            Debug.Log("No Swipe!");
         }
     }
 
@@ -100,12 +100,7 @@ public class SwipeDetector : MonoBehaviour
     void OnSwipeUp()
     {
         Debug.Log("Swipe UP");
-        rb.AddForce(Random.Range(-1.0f, 1.0f), 5f, 15f, ForceMode.Impulse);
-        //  rb.AddForce(0f,5f, 15f ,ForceMode.VelocityChange);
-        //  rb.AddForce(0f, 5f, 15f, ForceMode.Acceleration);
-        //  rb.AddForce(0f, 5f, 15f, ForceMode.Force);
-
-
+        rb.AddForce(new Vector3 (Random.Range(-1.0f, 1.0f), 5f, 15f)*speed*Time.deltaTime, ForceMode.Impulse);
     }
 
     void OnSwipeDown()
@@ -116,13 +111,12 @@ public class SwipeDetector : MonoBehaviour
     void OnSwipeLeft()
     {
         Debug.Log("Swipe Left");
-        rb.AddForce(Random.Range(-0.5f, -4f), 5f, 10f, ForceMode.Impulse);
+        rb.AddForce(new Vector3( Random.Range(-0.5f, -4f), 5f, 10f)*speed * Time.deltaTime, ForceMode.Impulse);
     }
 
     void OnSwipeRight()
     {
         Debug.Log("Swipe Right");
-        rb.AddForce(Random.Range(0.5f, 4f), 5f, 10f, ForceMode.Impulse);
-
+        rb.AddForce(new Vector3( Random.Range(0.5f, 4f), 5f, 10f) * speed * Time.deltaTime, ForceMode.Impulse);
     }
 }
