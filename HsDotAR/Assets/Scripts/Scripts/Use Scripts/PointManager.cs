@@ -35,6 +35,10 @@ public class PointManager : MonoBehaviour {
     }
     private void OnCollisionEnter(Collision collision)
     {
+        //if( collision.gameObject.name == "10score")
+        // score +=10;
+        //elseif( collision.gameObject.name == "9score")
+        // score +=9;
         if (collision.gameObject.name == "Board")
         {
             GetComponent<Rigidbody>().velocity = Vector3.zero;
