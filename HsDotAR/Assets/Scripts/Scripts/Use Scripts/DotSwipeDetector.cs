@@ -13,10 +13,12 @@ public class DotSwipeDetector : MonoBehaviour
 
     public GameObject dotPrefab;
     GameObject dotInsstance;
+    AudioSource Dotsound;
 
     void Start()
     {
         CreateDot();
+        Dotsound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,7 +47,9 @@ public class DotSwipeDetector : MonoBehaviour
             {
                 fingerDown = touch.position;
                 checkSwipe();
+                Dotsound.Play();
                 Invoke("CreateDot", 5f);
+
                
             }
         }
@@ -59,7 +63,7 @@ public class DotSwipeDetector : MonoBehaviour
             //Debug.Log("Vertical");
             if (fingerDown.y - fingerUp.y > 0)//up swipe
             {
-                OnSwipeUp();
+                OnSwipeUp();               
             }
             else if (fingerDown.y - fingerUp.y < 0)//Down swipe
             {
