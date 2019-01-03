@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class SwipeDetector : MonoBehaviour
+public class SwipeDartScript : MonoBehaviour
 {
     private Vector3 fingerDown;
     private Vector3 fingerUp;
