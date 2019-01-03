@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class DotSwipeDetector : MonoBehaviour
 {
@@ -15,10 +16,16 @@ public class DotSwipeDetector : MonoBehaviour
     GameObject dotInsstance;
     AudioSource Dotsound;
 
+    public Text countText;
+    private int count;
+
     void Start()
     {
         CreateDot();
         Dotsound = GetComponent<AudioSource>();
+        count = 0;
+        SetCount();
+
     }
 
     // Update is called once per frame
@@ -132,5 +139,28 @@ public class DotSwipeDetector : MonoBehaviour
         dotInsstance = Instantiate(dotPrefab, dotPrefab.transform.position, Quaternion.identity) as GameObject;
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            //other.gameObject.SetActive(false);
+            count = count + 1;
+            SetCount();
+        }
+
+       /* if (other.gameObject.CompareTag("Coin1"))
+        {
+            // other.gameObject.SetActive(false);
+            count = count + 3;
+            SetCount();
+            //Destroy(this.gameObject);
+        }
+        */
+    }
+
+    void SetCount()
+    {
+        countText.text = "Count: " + count.ToString();
+    }
 
 }

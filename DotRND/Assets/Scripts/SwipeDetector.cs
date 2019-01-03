@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SwipeDetector : MonoBehaviour
 {
@@ -11,8 +12,13 @@ public class SwipeDetector : MonoBehaviour
     Rigidbody rb;
     public float speed = 5f;
 
+    public Text countText;
+    private int count;
+
     void Start()
     {
+        count = 0;
+        SetCount();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -100,7 +106,7 @@ public class SwipeDetector : MonoBehaviour
     void OnSwipeUp()
     {
         Debug.Log("Swipe UP");
-        rb.AddForce(new Vector3 (Random.Range(-1.0f, 1.0f), 5f, 15f)*speed*Time.deltaTime, ForceMode.Impulse);
+        rb.AddForce(new Vector3 (Random.Range(-1.5f, 1.5f), Random.Range(4f , 8f), 15f)*speed*Time.deltaTime, ForceMode.Impulse);       
     }
 
     void OnSwipeDown()
@@ -111,12 +117,197 @@ public class SwipeDetector : MonoBehaviour
     void OnSwipeLeft()
     {
         Debug.Log("Swipe Left");
-        rb.AddForce(new Vector3( Random.Range(-0.5f, -4f), 5f, 10f)*speed * Time.deltaTime, ForceMode.Impulse);
+        rb.AddForce(new Vector3( Random.Range(-3f, 0f), 5f, 15f)*speed * Time.deltaTime, ForceMode.Impulse);
     }
 
     void OnSwipeRight()
     {
         Debug.Log("Swipe Right");
-        rb.AddForce(new Vector3( Random.Range(0.5f, 4f), 5f, 10f) * speed * Time.deltaTime, ForceMode.Impulse);
+        rb.AddForce(new Vector3( Random.Range(0f, 3f), 5f, 15f) * speed * Time.deltaTime, ForceMode.Impulse);
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("1"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 1;
+            SetCount();
+            rb.isKinematic = true;
+        }
+
+        if (other.gameObject.CompareTag("2"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 2;
+            SetCount();
+           // Destroy(this.gameObject, 3f);
+            rb.isKinematic = true;
+        }
+
+        if (other.gameObject.CompareTag("3"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 3;
+            SetCount();
+            rb.isKinematic = true;
+            // Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("4"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 4;
+            SetCount();
+            rb.isKinematic = true;
+        }
+
+        if (other.gameObject.CompareTag("5"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 5;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("6"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 6;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("7"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 7;
+            SetCount();
+            rb.isKinematic = true;
+        }
+
+        if (other.gameObject.CompareTag("8"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 8;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("9"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 9;
+            SetCount();
+            rb.isKinematic = true;
+           // Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("10"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 10;
+            SetCount();
+            rb.isKinematic = true;
+        }
+
+        if (other.gameObject.CompareTag("11"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 11;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("12"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 12;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("13"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 13;
+            SetCount();
+            rb.isKinematic = true;
+            // Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("14"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 14;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("15"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 15;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("16"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 16;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("17"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 17;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("18"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 18;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("19"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 19;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+
+        if (other.gameObject.CompareTag("20"))
+        {
+            Debug.Log(other.gameObject.name);
+            count = count + 20;
+            SetCount();
+            rb.isKinematic = true;
+            //Destroy(this.gameObject, 3f);
+        }
+       
+    }
+
+    void SetCount()
+    {
+        countText.text = "Points: " + count.ToString();
     }
 }

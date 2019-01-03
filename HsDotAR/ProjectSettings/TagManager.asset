@@ -6,6 +6,7 @@ TagManager:
   tags:
   - back
   - 50Cycle
+  - Coin
   layers:
   - Default
   - TransparentFX

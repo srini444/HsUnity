@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4277891407595456}
   - component: {fileID: 33856354494770902}
   - component: {fileID: 23675577021041750}
-  - component: {fileID: 65782181539348316}
   - component: {fileID: 96712165372741854}
   m_Layer: 0
   m_Name: 'dart '
@@ -38,9 +37,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4684787991477242}
-  - component: {fileID: 54977669569521794}
   - component: {fileID: 82557148699257686}
   - component: {fileID: 114276064539401378}
+  - component: {fileID: 54542922066991582}
+  - component: {fileID: 65151604137121820}
   m_Layer: 0
   m_Name: Dot
   m_TagString: Untagged
@@ -116,7 +116,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1562931849260172}
   m_Mesh: {fileID: 4300000, guid: af4f560448ba99342a14b377fdfa9e5d, type: 3}
---- !u!54 &54977669569521794
+--- !u!54 &54542922066991582
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -131,14 +131,14 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65782181539348316
+--- !u!65 &65151604137121820
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1562931849260172}
+  m_GameObject: {fileID: 1983928088966826}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.12129142, y: 0.0046739476, z: 0.0016564714}

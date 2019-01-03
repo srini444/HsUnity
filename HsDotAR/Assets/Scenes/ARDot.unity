@@ -178,7 +178,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -186,7 +186,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 66408662}
   m_Layer: 0
   m_Name: 17
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +235,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 66408660}
   m_GameObject: {fileID: 66408661}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -349,7 +349,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -357,7 +357,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 104875244}
   m_Layer: 0
   m_Name: 16
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,7 +406,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 104875242}
   m_GameObject: {fileID: 104875243}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -487,6 +487,7 @@ MonoBehaviour:
   SWIPE_THRESHOLD: 20
   speed: 50
   dotPrefab: {fileID: 1983928088966826, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
+  countText: {fileID: 1510093898}
 --- !u!82 &214118491
 AudioSource:
   m_ObjectHideFlags: 0
@@ -645,7 +646,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -653,7 +654,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -676,7 +677,7 @@ GameObject:
   - component: {fileID: 289007501}
   m_Layer: 0
   m_Name: 14
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -702,7 +703,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 289007499}
   m_GameObject: {fileID: 289007500}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -976,7 +977,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -984,7 +985,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -1007,7 +1008,7 @@ GameObject:
   - component: {fileID: 441013083}
   m_Layer: 0
   m_Name: 13
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1033,7 +1034,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 441013081}
   m_GameObject: {fileID: 441013082}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1147,7 +1148,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1155,7 +1156,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -1178,7 +1179,7 @@ GameObject:
   - component: {fileID: 498928311}
   m_Layer: 0
   m_Name: 19
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1204,7 +1205,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 498928309}
   m_GameObject: {fileID: 498928310}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1404,7 +1405,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1412,7 +1413,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -1435,7 +1436,7 @@ GameObject:
   - component: {fileID: 522942635}
   m_Layer: 0
   m_Name: 7
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1461,7 +1462,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 522942633}
   m_GameObject: {fileID: 522942634}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1853,11 +1854,6 @@ Prefab:
       propertyPath: txtScore
       value: 
       objectReference: {fileID: 1395705504}
-    - target: {fileID: 114802646648453744, guid: 70ebda90f6f93b84fa830e9da6a28924,
-        type: 2}
-      propertyPath: txtScore
-      value: 
-      objectReference: {fileID: 1510093898}
     - target: {fileID: 114260245428806832, guid: 70ebda90f6f93b84fa830e9da6a28924,
         type: 2}
       propertyPath: txtScore
@@ -1903,95 +1899,6 @@ Prefab:
       propertyPath: txtScore
       value: 
       objectReference: {fileID: 1395705504}
-    - target: {fileID: 212618341346058578, guid: 70ebda90f6f93b84fa830e9da6a28924,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522415245754670, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1347453257271692, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1163200495470996, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143661204275534, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677502173764616, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1063324685977104, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1725158222466644, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1072664718226540, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1462006345091554, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180305330306636, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640810460726268, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1752636625600424, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844999912163602, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268979984224340, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1157095980711318, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1458259266877674, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1694311096217658, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1733833107424584, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1208738641316164, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026520799509166, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1392627377575088, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70ebda90f6f93b84fa830e9da6a28924, type: 2}
   m_IsPrefabParent: 0
@@ -2141,7 +2048,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2149,7 +2056,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -2172,7 +2079,7 @@ GameObject:
   - component: {fileID: 1026783416}
   m_Layer: 0
   m_Name: 12
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2198,7 +2105,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1026783414}
   m_GameObject: {fileID: 1026783415}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2312,7 +2219,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2320,7 +2227,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -2343,7 +2250,7 @@ GameObject:
   - component: {fileID: 1129469884}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2369,7 +2276,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1129469882}
   m_GameObject: {fileID: 1129469883}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2483,7 +2390,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2491,7 +2398,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -2514,7 +2421,7 @@ GameObject:
   - component: {fileID: 1146529352}
   m_Layer: 0
   m_Name: 11
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2540,7 +2447,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1146529350}
   m_GameObject: {fileID: 1146529351}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2646,7 +2553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 2e88529762561fb4eb4072c2b57a93e4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 2e88529762561fb4eb4072c2b57a93e4, type: 3}
       propertyPath: m_Name
@@ -2747,7 +2654,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2755,7 +2662,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -2778,7 +2685,7 @@ GameObject:
   - component: {fileID: 1212665286}
   m_Layer: 0
   m_Name: 20
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2804,7 +2711,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1212665284}
   m_GameObject: {fileID: 1212665285}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3040,7 +2947,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3048,7 +2955,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -3071,7 +2978,7 @@ GameObject:
   - component: {fileID: 1260317437}
   m_Layer: 0
   m_Name: 9
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3097,7 +3004,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1260317435}
   m_GameObject: {fileID: 1260317436}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3338,7 +3245,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3346,7 +3253,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -3369,7 +3276,7 @@ GameObject:
   - component: {fileID: 1312208620}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3395,7 +3302,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1312208618}
   m_GameObject: {fileID: 1312208619}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3509,7 +3416,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3517,7 +3424,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -3540,7 +3447,7 @@ GameObject:
   - component: {fileID: 1330606551}
   m_Layer: 0
   m_Name: 18
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3566,7 +3473,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1330606549}
   m_GameObject: {fileID: 1330606550}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3846,7 +3753,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3854,7 +3761,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -3877,7 +3784,7 @@ GameObject:
   - component: {fileID: 1433671950}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3903,7 +3810,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1433671948}
   m_GameObject: {fileID: 1433671949}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4187,11 +4094,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.42
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: -6.01
       objectReference: {fileID: 0}
     - target: {fileID: 4684787991477242, guid: 52b8a3ba78d75aa4cb9636e1169cf7db, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4355,7 +4262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4363,7 +4270,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -4386,7 +4293,7 @@ GameObject:
   - component: {fileID: 1691669962}
   m_Layer: 0
   m_Name: 6
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4412,7 +4319,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1691669960}
   m_GameObject: {fileID: 1691669961}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4760,7 +4667,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4768,7 +4675,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -4791,7 +4698,7 @@ GameObject:
   - component: {fileID: 1838052955}
   m_Layer: 0
   m_Name: 10
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4817,7 +4724,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1838052953}
   m_GameObject: {fileID: 1838052954}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4931,7 +4838,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4939,7 +4846,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -4962,7 +4869,7 @@ GameObject:
   - component: {fileID: 1855927117}
   m_Layer: 0
   m_Name: 15
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4988,7 +4895,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 1855927115}
   m_GameObject: {fileID: 1855927116}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5460,7 +5367,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5468,7 +5375,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -5491,7 +5398,7 @@ GameObject:
   - component: {fileID: 2021356199}
   m_Layer: 0
   m_Name: 8
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5517,7 +5424,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 2021356197}
   m_GameObject: {fileID: 2021356198}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5631,7 +5538,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5639,7 +5546,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -5662,7 +5569,7 @@ GameObject:
   - component: {fileID: 2069125522}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5688,7 +5595,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 2069125520}
   m_GameObject: {fileID: 2069125521}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5802,7 +5709,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5810,7 +5717,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2908b05299c321f4c8bf53fb6f83028a, type: 2}
     - target: {fileID: 100000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: 75d587886cc2aeb4982632335d1aa6aa, type: 3}
       propertyPath: m_Mesh
@@ -5833,7 +5740,7 @@ GameObject:
   - component: {fileID: 2094641595}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5859,7 +5766,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 2094641593}
   m_GameObject: {fileID: 2094641594}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
