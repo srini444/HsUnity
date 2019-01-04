@@ -10,6 +10,9 @@ public class SwipeDartScript : MonoBehaviour
 
     public float SWIPE_THRESHOLD = 10f;
     Rigidbody rb;
+
+    public GameObject DartPrefab;
+    public Transform  DartPos;
     public float speed = 5f;
 
     public Text countText;
@@ -19,7 +22,7 @@ public class SwipeDartScript : MonoBehaviour
     {
         count = 0;
         SetCount();
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();        
     }
 
     // Update is called once per frame
