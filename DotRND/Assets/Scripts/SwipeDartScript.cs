@@ -11,24 +11,29 @@ public class SwipeDartScript : MonoBehaviour
     public float SWIPE_THRESHOLD = 10f;
     Rigidbody rb;
 
-    public GameObject DartPrefab;
-    public Transform  DartPos;
+  
     public float speed = 5f;
 
     public Text countText;
     private int count;
+    //GameObject Board;
+    //public float Boardspeed = 10f ;
+    GameObject Triangle;
 
     void Start()
-    {
+    {      
         count = 0;
         SetCount();
-        rb = GetComponent<Rigidbody>();        
+        rb = GetComponent<Rigidbody>();
+        //Board = GameObject.Find("Board");
+       // Triangle = GameObject.Find("Triangle");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //Board.transform.Rotate(-10f* Boardspeed * Time.deltaTime, 0f, 0f);
+        //Triangle.transform.Rotate(-10f * Boardspeed * Time.deltaTime, 0f, 0f);
         foreach (Touch touch in Input.touches)
         {
             if (touch.phase == TouchPhase.Began)
@@ -51,7 +56,7 @@ public class SwipeDartScript : MonoBehaviour
             if (touch.phase == TouchPhase.Ended)
             {
                 fingerDown = touch.position;
-                checkSwipe();
+                checkSwipe();             
             }
         }
     }

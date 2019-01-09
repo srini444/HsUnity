@@ -134,6 +134,8 @@ public class DotSwipeDetector : MonoBehaviour
         Debug.Log("Swipe Right");
         dotInsstance.GetComponent<Rigidbody>().AddForce(Random.Range(0f, 3f), 5f, 15f, ForceMode.Impulse);        
     }
+
+
     public void CreateDot()
     {
         dotInsstance = Instantiate(dotPrefab, dotPrefab.transform.position, Quaternion.identity) as GameObject;
