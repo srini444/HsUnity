@@ -11,7 +11,9 @@ public class SwipeDartScript : MonoBehaviour
     public float SWIPE_THRESHOLD = 10f;
     Rigidbody rb;
 
-  
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+
     public float speed = 5f;
 
     public Text countText;
@@ -20,13 +22,22 @@ public class SwipeDartScript : MonoBehaviour
     //public float Boardspeed = 10f ;
     GameObject Triangle;
 
+    void Awake()
+    {
+        this.originalPosition = this.transform.position;
+        this.originalRotation = this.transform.rotation;
+    }
+
     void Start()
-    {      
+    {
+        //StartCoroutine(resetTransform());
         count = 0;
         SetCount();
         rb = GetComponent<Rigidbody>();
         //Board = GameObject.Find("Board");
-       // Triangle = GameObject.Find("Triangle");
+        // Triangle = GameObject.Find("Triangle");
+        //originalPos = gameObject.transform.position;
+        
     }
 
     // Update is called once per frame
@@ -63,6 +74,7 @@ public class SwipeDartScript : MonoBehaviour
 
     void checkSwipe()
     {
+        
         //Check if Vertical swipe
         if (verticalMove() > SWIPE_THRESHOLD && verticalMove() > horizontalValMove())
         {
@@ -97,6 +109,7 @@ public class SwipeDartScript : MonoBehaviour
         else
         {
             Debug.Log("No Swipe!");
+            StartCoroutine(resetTransform());
         }
     }
 
@@ -114,7 +127,8 @@ public class SwipeDartScript : MonoBehaviour
     void OnSwipeUp()
     {
         Debug.Log("Swipe UP");
-        rb.AddForce(new Vector3 (Random.Range(-1.5f, 1.5f), Random.Range(4f , 8f), 15f)*speed*Time.deltaTime, ForceMode.Impulse);       
+        rb.AddForce(new Vector3 (Random.Range(-1.5f, 1.5f), Random.Range(4f , 8f), 15f)*speed*Time.deltaTime, ForceMode.Impulse);
+        
     }
 
     void OnSwipeDown()
@@ -142,6 +156,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 1;
             SetCount();
             rb.isKinematic = true;
+          //  resetTransform();
         }
 
         if (other.gameObject.CompareTag("2"))
@@ -151,6 +166,7 @@ public class SwipeDartScript : MonoBehaviour
             SetCount();
            // Destroy(this.gameObject, 3f);
             rb.isKinematic = true;
+          //  resetTransform();
         }
 
         if (other.gameObject.CompareTag("3"))
@@ -159,6 +175,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 3;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
             // Destroy(this.gameObject, 3f);
         }
 
@@ -168,6 +185,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 4;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
         }
 
         if (other.gameObject.CompareTag("5"))
@@ -176,6 +194,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 5;
             SetCount();
             rb.isKinematic = true;
+            //resetTransform();
             //Destroy(this.gameObject, 3f);
         }
 
@@ -185,6 +204,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 6;
             SetCount();
             rb.isKinematic = true;
+            //resetTransform();
             //Destroy(this.gameObject, 3f);
         }
 
@@ -194,6 +214,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 7;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
         }
 
         if (other.gameObject.CompareTag("8"))
@@ -202,6 +223,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 8;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
             //Destroy(this.gameObject, 3f);
         }
 
@@ -211,7 +233,8 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 9;
             SetCount();
             rb.isKinematic = true;
-           // Destroy(this.gameObject, 3f);
+           // resetTransform();
+            // Destroy(this.gameObject, 3f);
         }
 
         if (other.gameObject.CompareTag("10"))
@@ -220,6 +243,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 10;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
         }
 
         if (other.gameObject.CompareTag("11"))
@@ -228,6 +252,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 11;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
             //Destroy(this.gameObject, 3f);
         }
 
@@ -237,6 +262,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 12;
             SetCount();
             rb.isKinematic = true;
+            //resetTransform();
             //Destroy(this.gameObject, 3f);
         }
 
@@ -246,6 +272,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 13;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
             // Destroy(this.gameObject, 3f);
         }
 
@@ -255,6 +282,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 14;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
             //Destroy(this.gameObject, 3f);
         }
 
@@ -264,6 +292,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 15;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
             //Destroy(this.gameObject, 3f);
         }
 
@@ -273,6 +302,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 16;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
             //Destroy(this.gameObject, 3f);
         }
 
@@ -282,6 +312,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 17;
             SetCount();
             rb.isKinematic = true;
+           // resetTransform();
             //Destroy(this.gameObject, 3f);
         }
 
@@ -292,6 +323,7 @@ public class SwipeDartScript : MonoBehaviour
             SetCount();
             rb.isKinematic = true;
             //Destroy(this.gameObject, 3f);
+            //resetTransform();
         }
 
         if (other.gameObject.CompareTag("19"))
@@ -300,6 +332,7 @@ public class SwipeDartScript : MonoBehaviour
             count = count + 19;
             SetCount();
             rb.isKinematic = true;
+            //resetTransform();
             //Destroy(this.gameObject, 3f);
         }
 
@@ -310,6 +343,7 @@ public class SwipeDartScript : MonoBehaviour
             SetCount();
             rb.isKinematic = true;
             //Destroy(this.gameObject, 3f);
+           // resetTransform();
         }
        
     }
@@ -318,4 +352,13 @@ public class SwipeDartScript : MonoBehaviour
     {
         countText.text = "Points: " + count.ToString();
     }
+
+   
+    IEnumerator resetTransform()
+    {       
+        yield return new WaitForSeconds(7);
+        this.transform.position = this.originalPosition;
+        this.transform.rotation = this.originalRotation;
+    }
+
 }
