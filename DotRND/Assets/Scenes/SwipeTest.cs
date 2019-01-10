@@ -16,9 +16,10 @@ public class SwipeTest : MonoBehaviour {
 
     float swipeDistance;
     float swipeTime;
-	void Start ()
+
+    void Start ()
     {
-		
+        
 	}
 	
 	
@@ -51,7 +52,6 @@ public class SwipeTest : MonoBehaviour {
 
 
 	}
-
     void swipe()
     {
         Vector2 distance = endPos - startPos;
