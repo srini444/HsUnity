@@ -108,8 +108,7 @@ public class SwipeDartScript : MonoBehaviour
         //No Movement at-all
         else
         {
-            Debug.Log("No Swipe!");
-            StartCoroutine(resetTransform());
+            Debug.Log("No Swipe!");          
         }
     }
 
@@ -128,7 +127,7 @@ public class SwipeDartScript : MonoBehaviour
     {
         Debug.Log("Swipe UP");
         rb.AddForce(new Vector3 (Random.Range(-1.5f, 1.5f), Random.Range(4f , 8f), 15f)*speed*Time.deltaTime, ForceMode.Impulse);
-        
+        StartCoroutine(resetTransform());
     }
 
     void OnSwipeDown()
