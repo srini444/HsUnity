@@ -6,18 +6,27 @@ public class moveSwipe : MonoBehaviour {
 
     Rigidbody rb;
     public float jumpForce;
+
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
 	}
 	
-	// Update is called once per frame
+	
 	void Update ()
     {
 		
 	}
-    public void jump()
+    public void upSwipe()
     {
-        rb.AddForce(new Vector3(0f, Random.Range(5f, 10f), Random.Range(5f,50f) * jumpForce), ForceMode.Impulse);
+        rb.AddForce(new Vector3(Random.Range(-1.5f, 1.5f), Random.Range(4f, 8f), 15f) * jumpForce * Time.deltaTime, ForceMode.Impulse);
+    }
+    public void leftSwipe()
+    {        
+        rb.AddForce(new Vector3(Random.Range(-3f, 0f), 5f, 15f) * jumpForce * Time.deltaTime, ForceMode.Impulse);
+    }
+    public void rightSwipe()
+    {
+        rb.AddForce(new Vector3(Random.Range(0f, 3f), 5f, 15f) * jumpForce * Time.deltaTime, ForceMode.Impulse);
     }
 }

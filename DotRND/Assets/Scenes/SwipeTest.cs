@@ -60,10 +60,12 @@ public class SwipeTest : MonoBehaviour {
             if (distance.x > 0)
             {
                 Debug.Log("Right Swipe");
+                player.GetComponent<moveSwipe>().rightSwipe();
             }
             if (distance.x < 0)
             {
                 Debug.Log("Left Swipe");
+                player.GetComponent<moveSwipe>().leftSwipe();
             }
         }
 
@@ -73,7 +75,7 @@ public class SwipeTest : MonoBehaviour {
             if (distance.y > 0)
             {
                 Debug.Log("Up Swipe");
-                player.GetComponent<moveSwipe>().jump();
+                player.GetComponent<moveSwipe>().upSwipe();
             }
             if (distance.y < 0)
             {
