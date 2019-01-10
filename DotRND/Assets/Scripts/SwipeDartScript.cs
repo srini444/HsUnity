@@ -6,7 +6,7 @@ public class SwipeDartScript : MonoBehaviour
 {
     private Vector3 fingerDown;
     private Vector3 fingerUp;
-    public bool detectSwipeOnlyAfterRelease = false;
+    public bool detectSwipeOnlyAfterRelease = false , col;
 
     public float SWIPE_THRESHOLD = 10f;
     Rigidbody rb;
@@ -147,10 +147,23 @@ public class SwipeDartScript : MonoBehaviour
         rb.AddForce(new Vector3( Random.Range(0f, 3f), 5f, 15f) * speed * Time.deltaTime, ForceMode.Impulse);
     }
 
+
+    IEnumerator resetTransform()
+    {
+        yield return new WaitForSeconds(3);
+        Debug.Log("Swipe Dectetor");
+        rb.isKinematic = false;
+        rb.AddForce(Vector3.zero);
+        this.transform.position = this.originalPosition;
+        this.transform.rotation = this.originalRotation;
+
+    }
+
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("1"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 1;
             SetCount();
@@ -160,6 +173,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("2"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 2;
             SetCount();
@@ -170,6 +184,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("3"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 3;
             SetCount();
@@ -180,6 +195,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("4"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 4;
             SetCount();
@@ -189,6 +205,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("5"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 5;
             SetCount();
@@ -199,6 +216,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("6"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 6;
             SetCount();
@@ -209,6 +227,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("7"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 7;
             SetCount();
@@ -218,6 +237,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("8"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 8;
             SetCount();
@@ -228,6 +248,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("9"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 9;
             SetCount();
@@ -238,6 +259,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("10"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 10;
             SetCount();
@@ -247,6 +269,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("11"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 11;
             SetCount();
@@ -257,6 +280,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("12"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 12;
             SetCount();
@@ -267,6 +291,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("13"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 13;
             SetCount();
@@ -277,6 +302,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("14"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 14;
             SetCount();
@@ -287,6 +313,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("15"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 15;
             SetCount();
@@ -297,6 +324,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("16"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 16;
             SetCount();
@@ -307,6 +335,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("17"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 17;
             SetCount();
@@ -317,6 +346,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("18"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 18;
             SetCount();
@@ -327,6 +357,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("19"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 19;
             SetCount();
@@ -337,6 +368,7 @@ public class SwipeDartScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("20"))
         {
+            col = true;
             Debug.Log(other.gameObject.name);
             count = count + 20;
             SetCount();
@@ -353,11 +385,6 @@ public class SwipeDartScript : MonoBehaviour
     }
 
    
-    IEnumerator resetTransform()
-    {       
-        yield return new WaitForSeconds(7);
-        this.transform.position = this.originalPosition;
-        this.transform.rotation = this.originalRotation;
-    }
+   
 
 }
