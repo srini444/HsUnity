@@ -48,6 +48,8 @@ public class SwipeTest : MonoBehaviour {
 
             }
         }
+
+
 	}
 
     void swipe()
@@ -83,4 +85,6 @@ public class SwipeTest : MonoBehaviour {
             }
         }
     }
+
+
 }

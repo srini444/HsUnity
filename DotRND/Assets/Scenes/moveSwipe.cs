@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class moveSwipe : MonoBehaviour {
-
+    
     Rigidbody rb;
+
+    [SerializeField]
     public float jumpForce;
 
     void Start ()
