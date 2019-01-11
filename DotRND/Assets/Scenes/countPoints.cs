@@ -196,7 +196,7 @@ public class countPoints : MonoBehaviour {
 
     void SetCount()
     {
-        countText.text = "Points: " + count.ToString();
+        countText.text = "POINTS : " + count.ToString();
     }
 
 
