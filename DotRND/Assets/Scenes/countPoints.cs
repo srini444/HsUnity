@@ -9,6 +9,7 @@ public class countPoints : MonoBehaviour {
     Rigidbody rbmove;
 
     moveSwipe move ;
+    GameObject Panel;
 
     AudioSource coinSound;
     void Start ()
@@ -18,15 +19,15 @@ public class countPoints : MonoBehaviour {
         rbmove = GetComponent<Rigidbody>();
         coinSound = GetComponent<AudioSource>();
 
-        //Camera.main.transform.rotation = Quaternion.Euler(1.5f, -26f, 0f);
-        //Camera.main.transform.position = new Vector3(7f, 7f, 5f);
+        Panel = GameObject.Find("Panel");   
+        Panel.SetActive(true);
 
     }
 	
 	
 	void Update ()
     {
-		
+        
 	}
 
     void OnCollisionEnter(Collision other)
@@ -245,6 +246,7 @@ public class countPoints : MonoBehaviour {
            // count = count + 50;
            // SetCount();
             rbmove.isKinematic = true;
+            //Panel.SetActive(true);
             //coinSound.Play();
             //StartCoroutine(camPos());
         }
