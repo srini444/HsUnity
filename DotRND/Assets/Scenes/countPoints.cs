@@ -10,11 +10,13 @@ public class countPoints : MonoBehaviour {
 
     moveSwipe move ;
 
+    AudioSource coinSound;
     void Start ()
     {
         count = 0;
         SetCount();
         rbmove = GetComponent<Rigidbody>();
+        coinSound = GetComponent<AudioSource>();
     }
 	
 	
@@ -31,6 +33,7 @@ public class countPoints : MonoBehaviour {
             count = count + 1;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
 
         }
         if (other.gameObject.CompareTag("2"))
@@ -39,6 +42,7 @@ public class countPoints : MonoBehaviour {
             count = count + 2;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("3"))
@@ -47,6 +51,7 @@ public class countPoints : MonoBehaviour {
             count = count + 3;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("4"))
@@ -55,6 +60,7 @@ public class countPoints : MonoBehaviour {
             count = count + 4;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("5"))
@@ -63,6 +69,7 @@ public class countPoints : MonoBehaviour {
             count = count + 5;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
         if (other.gameObject.CompareTag("6"))
         {
@@ -70,6 +77,7 @@ public class countPoints : MonoBehaviour {
             count = count + 6;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("7"))
@@ -78,6 +86,7 @@ public class countPoints : MonoBehaviour {
             count = count + 7;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("8"))
@@ -86,6 +95,7 @@ public class countPoints : MonoBehaviour {
             count = count + 8;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("9"))
@@ -94,6 +104,7 @@ public class countPoints : MonoBehaviour {
             count = count + 9;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
         if (other.gameObject.CompareTag("10"))
         {
@@ -101,6 +112,7 @@ public class countPoints : MonoBehaviour {
             count = count + 10;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("11"))
@@ -109,6 +121,7 @@ public class countPoints : MonoBehaviour {
             count = count + 11;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("12"))
@@ -117,6 +130,7 @@ public class countPoints : MonoBehaviour {
             count = count + 12;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("13"))
@@ -125,6 +139,7 @@ public class countPoints : MonoBehaviour {
             count = count + 13;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
         if (other.gameObject.CompareTag("14"))
         {
@@ -132,6 +147,7 @@ public class countPoints : MonoBehaviour {
             count = count + 14;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("15"))
@@ -140,6 +156,7 @@ public class countPoints : MonoBehaviour {
             count = count + 15;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("16"))
@@ -156,6 +173,7 @@ public class countPoints : MonoBehaviour {
             count = count + 17;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("18"))
@@ -164,6 +182,7 @@ public class countPoints : MonoBehaviour {
             count = count + 18;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("19"))
@@ -172,6 +191,7 @@ public class countPoints : MonoBehaviour {
             count = count + 19;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("20"))
@@ -180,6 +200,7 @@ public class countPoints : MonoBehaviour {
             count = count + 20;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
         if (other.gameObject.CompareTag("50"))
@@ -188,6 +209,7 @@ public class countPoints : MonoBehaviour {
             count = count + 50;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
         }
 
     }

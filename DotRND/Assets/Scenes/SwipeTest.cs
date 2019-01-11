@@ -17,10 +17,12 @@ public class SwipeTest : MonoBehaviour {
     float swipeDistance;
     float swipeTime;
 
+    AudioSource arrrowSound;
+
     void Start ()
     {
-        
-	}
+        arrrowSound = GetComponent<AudioSource>();
+    }
 	
 	
 	void Update ()
@@ -63,11 +65,13 @@ public class SwipeTest : MonoBehaviour {
             {
                 Debug.Log("Right Swipe");
                 player.GetComponent<moveSwipe>().rightSwipe();
+                arrrowSound.Play();
             }
             if (distance.x < 0)
             {
                 Debug.Log("Left Swipe");
                 player.GetComponent<moveSwipe>().leftSwipe();
+                arrrowSound.Play();
             }
         }
 
@@ -78,6 +82,7 @@ public class SwipeTest : MonoBehaviour {
             {
                 Debug.Log("Up Swipe");
                 player.GetComponent<moveSwipe>().upSwipe();
+                arrrowSound.Play();
             }
             if (distance.y < 0)
             {

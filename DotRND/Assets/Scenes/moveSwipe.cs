@@ -9,20 +9,22 @@ public class moveSwipe : MonoBehaviour {
     [SerializeField]
     public float jumpForce;
 
-    private Vector3 originalPosition;
+ /*   private Vector3 originalPosition;
     private Quaternion originalRotation;
+*/
+    
 
-    void Awake()
+  /*  void Awake()
     {
         this.originalPosition = this.transform.position;
         this.originalRotation = this.transform.rotation;
     }
 
-
+*/
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
-        StartCoroutine(resetPos());
+      //  StartCoroutine(resetPos());        
     }
 	
 	
@@ -31,7 +33,7 @@ public class moveSwipe : MonoBehaviour {
         
 	}
 
-    IEnumerator resetPos()
+   /* IEnumerator resetPos()
     {
         yield return new WaitForSeconds(3f);
         Debug.Log("Swipe Dectetor");
@@ -40,10 +42,10 @@ public class moveSwipe : MonoBehaviour {
         this.transform.position = this.originalPosition;
         this.transform.rotation = this.originalRotation;
     }
-
+*/
     public void upSwipe()
     {
-        rb.AddForce(new Vector3(Random.Range(-1.5f, 1.5f), Random.Range(4f, 8f), 15f) * jumpForce * Time.deltaTime, ForceMode.Impulse);
+        rb.AddForce(new Vector3(Random.Range(-1.5f, 1.5f), Random.Range(4f, 8f), 15f) * jumpForce * Time.deltaTime, ForceMode.Impulse);        
     }
     public void leftSwipe()
     {        
