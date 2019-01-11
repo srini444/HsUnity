@@ -35,7 +35,7 @@ public class moveSwipe : MonoBehaviour {
 
     IEnumerator resetPos()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         //Debug.Log("Swipe Dectetor");
         rb.isKinematic = false;
         rb.AddForce(Vector3.zero);
