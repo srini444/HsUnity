@@ -17,6 +17,10 @@ public class countPoints : MonoBehaviour {
         SetCount();
         rbmove = GetComponent<Rigidbody>();
         coinSound = GetComponent<AudioSource>();
+
+        //Camera.main.transform.rotation = Quaternion.Euler(1.5f, -26f, 0f);
+        //Camera.main.transform.position = new Vector3(7f, 7f, 5f);
+
     }
 	
 	
@@ -34,6 +38,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
 
         }
         if (other.gameObject.CompareTag("2"))
@@ -43,6 +48,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("3"))
@@ -52,6 +58,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("4"))
@@ -61,6 +68,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("5"))
@@ -70,6 +78,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
         if (other.gameObject.CompareTag("6"))
         {
@@ -78,6 +87,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("7"))
@@ -87,6 +97,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("8"))
@@ -96,6 +107,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("9"))
@@ -105,6 +117,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
         if (other.gameObject.CompareTag("10"))
         {
@@ -113,6 +126,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("11"))
@@ -122,6 +136,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("12"))
@@ -131,6 +146,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("13"))
@@ -140,6 +156,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
         if (other.gameObject.CompareTag("14"))
         {
@@ -148,6 +165,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("15"))
@@ -157,6 +175,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("16"))
@@ -165,6 +184,8 @@ public class countPoints : MonoBehaviour {
             count = count + 16;
             SetCount();
             rbmove.isKinematic = true;
+            coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("17"))
@@ -174,6 +195,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("18"))
@@ -183,6 +205,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("19"))
@@ -192,6 +215,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("20"))
@@ -201,6 +225,7 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
         if (other.gameObject.CompareTag("50"))
@@ -210,11 +235,21 @@ public class countPoints : MonoBehaviour {
             SetCount();
             rbmove.isKinematic = true;
             coinSound.Play();
+            StartCoroutine(camPos());
         }
 
     }
 
+    IEnumerator camPos()
+    {
+        yield return new WaitForSeconds(1f);
+        Camera.main.transform.rotation = Quaternion.Euler(1.5f, -26f, 0f);
+        Camera.main.transform.position = new Vector3(7f, 7f, 5f);
+        yield return new WaitForSeconds(3f);
+        Camera.main.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        Camera.main.transform.position = new Vector3(0f, 2.21f, -11.31f);
 
+    }
 
     void SetCount()
     {
