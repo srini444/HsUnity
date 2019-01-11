@@ -243,8 +243,8 @@ public class countPoints : MonoBehaviour {
     IEnumerator camPos()
     {
         yield return new WaitForSeconds(1f);
-        Camera.main.transform.rotation = Quaternion.Euler(1.5f, -26f, 0f);
-        Camera.main.transform.position = new Vector3(7f, 7f, 5f);
+        Camera.main.transform.rotation = Quaternion.Euler(1.5f, -26.55f, 0f);
+        Camera.main.transform.position = new Vector3(7f, 7f, 7f);
         yield return new WaitForSeconds(3f);
         Camera.main.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         Camera.main.transform.position = new Vector3(0f, 2.21f, -11.31f);
