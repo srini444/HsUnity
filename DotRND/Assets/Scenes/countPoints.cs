@@ -238,6 +238,16 @@ public class countPoints : MonoBehaviour {
             StartCoroutine(camPos());
         }
 
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log(other.gameObject.name);
+
+           // count = count + 50;
+           // SetCount();
+            rbmove.isKinematic = true;
+            //coinSound.Play();
+            //StartCoroutine(camPos());
+        }
     }
 
     IEnumerator camPos()
