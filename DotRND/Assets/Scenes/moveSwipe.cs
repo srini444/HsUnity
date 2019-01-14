@@ -12,8 +12,6 @@ public class moveSwipe : MonoBehaviour {
     private Vector3 originalPosition;
     private Quaternion originalRotation;
 
-    
-
     void Awake()
     {
         this.originalPosition = this.transform.position;
@@ -23,8 +21,7 @@ public class moveSwipe : MonoBehaviour {
 
     void Start ()
     {
-        rb = GetComponent<Rigidbody>();
-      //  StartCoroutine(resetPos());        
+        rb = GetComponent<Rigidbody>();       
     }
 	
 	

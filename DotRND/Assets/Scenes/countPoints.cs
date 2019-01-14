@@ -7,9 +7,12 @@ public class countPoints : MonoBehaviour {
     public Text countText;
     private int count;
     Rigidbody rbmove;
+    GameObject canvas;
+    GameObject panel;
+    GameObject Twen20;
 
     moveSwipe move ;
-    GameObject Panel;
+   
     
     AudioSource coinSound;
     void Start ()
@@ -19,9 +22,9 @@ public class countPoints : MonoBehaviour {
         rbmove = GetComponent<Rigidbody>();
         coinSound = GetComponent<AudioSource>();
 
-        Panel = GameObject.Find("Canvas/Panel");   
-        Panel.SetActive(true);
-
+        canvas = GameObject.Find("Canvas");
+        panel = canvas.transform.Find("Panel").gameObject;
+        Twen20 = canvas.transform.Find("20").gameObject;
     }
 	
 	
@@ -227,6 +230,7 @@ public class countPoints : MonoBehaviour {
             rbmove.isKinematic = true;
             coinSound.Play();
             StartCoroutine(camPos());
+            Twen20.SetActive(true);
         }
 
         if (other.gameObject.CompareTag("50"))
@@ -242,25 +246,27 @@ public class countPoints : MonoBehaviour {
         if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log(other.gameObject.name);
-
-           // count = count + 50;
-           // SetCount();
             rbmove.isKinematic = true;
-            //Panel.SetActive(true);
-            //coinSound.Play();
-            //StartCoroutine(camPos());
+            panel.SetActive(true);
+            StartCoroutine(camPos());
+
+
         }
     }
 
     IEnumerator camPos()
     {
+        
         yield return new WaitForSeconds(1f);
         Camera.main.transform.rotation = Quaternion.Euler(1.5f, -26.55f, 0f);
         Camera.main.transform.position = new Vector3(7f, 7f, 7f);
         yield return new WaitForSeconds(3f);
+        panel.SetActive(false);
+        Twen20.SetActive(false);
         Camera.main.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         Camera.main.transform.position = new Vector3(0f, 2.21f, -11.31f);
         
+
     }
 
     void SetCount()
