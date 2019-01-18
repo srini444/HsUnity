@@ -6,12 +6,16 @@ public class moveSwipe : MonoBehaviour {
     
     Rigidbody rb;
 
+    //SwipeTest swipeTest = new SwipeTest(); 
     [SerializeField]
     public float jumpForce;
 
     private Vector3 originalPosition;
     private Quaternion originalRotation;
 
+    
+    public GameObject a;
+    public SwipeTest swipeTest;
     void Awake()
     {
         this.originalPosition = this.transform.position;
@@ -21,23 +25,28 @@ public class moveSwipe : MonoBehaviour {
 
     void Start ()
     {
-        rb = GetComponent<Rigidbody>();       
+        rb = GetComponent<Rigidbody>();
+        swipeTest = a.GetComponent<SwipeTest>();
+
+        StartCoroutine(resetPos());        
     }
 	
 	
 	void Update ()
     {
-        
+       
 	}
 
     IEnumerator resetPos()
     {
         yield return new WaitForSeconds(5f);
         //Debug.Log("Swipe Dectetor");
+       
         rb.isKinematic = false;
         rb.AddForce(Vector3.zero);
         this.transform.position = this.originalPosition;
         this.transform.rotation = this.originalRotation;
+        swipeTest.swipeBool = true;
     }
 
     public void upSwipe()

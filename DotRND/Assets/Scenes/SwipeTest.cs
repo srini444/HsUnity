@@ -17,40 +17,48 @@ public class SwipeTest : MonoBehaviour {
     float swipeDistance;
     float swipeTime;
 
+    public bool swipeBool;
     AudioSource arrrowSound;
 
     void Start ()
     {
         arrrowSound = GetComponent<AudioSource>();
+        swipeBool = true;
     }
 	
 	
 	void Update ()
     {
-		if(Input.touchCount > 0)
+
+        if(swipeBool == true)
         {
-            Touch touch = Input.GetTouch(0);
-            if(touch.phase == TouchPhase.Began)
+            if (Input.touchCount > 0)
             {
-                startTime = Time.time;
-                startPos  = touch.position;
-            }
-            else if(touch.phase == TouchPhase.Ended)
-            {
-                endTime = Time.time;
-                endPos  = touch.position;
-
-                swipeDistance = (endPos - startPos).magnitude;
-                swipeTime = (endTime - startTime);
-
-                //Swipe Touch 
-                if (swipeTime>maxTime && swipeDistance > minSwipeDist)
+                Touch touch = Input.GetTouch(0);
+                if (touch.phase == TouchPhase.Began)
                 {
-                    swipe();
+                    startTime = Time.time;
+                    startPos = touch.position;
                 }
+                else if (touch.phase == TouchPhase.Ended)
+                {
+                    endTime = Time.time;
+                    endPos = touch.position;
 
+                    swipeDistance = (endPos - startPos).magnitude;
+                    swipeTime = (endTime - startTime);
+
+                    //Swipe Touch 
+                    if (swipeTime > maxTime && swipeDistance > minSwipeDist)
+                    {
+                        swipe();
+                        swipeBool = false;
+                    }
+
+                }
             }
         }
+        
 
 
 	}
